@@ -1,0 +1,139 @@
+@charset "utf-8";
+/*** common ***/
+.border-box{
+    border: 1px solid #aaa;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+    padding: 2px 4px;
+    margin: 0 2px;
+}
+.r-border{
+    border-right: 1px solid #aaa;
+}
+.text-red{
+    color: tomato;
+}
+.text-big{
+    font-size: 1.5rem;
+    font-weight: bolder;
+}
+.text-w{
+    font-weight: bolder;
+}
+.rect-radius{
+    border-radius: 20px;
+    border: 1px solid tomato;
+    padding: 2px;
+    text-align: center;
+}
+/**********/
+main{
+    width: 1440px;
+    height: 768px;
+    display: flex;
+    gap: 2rem;
+    margin: 50px auto;
+}
+/* detail style */
+section#detail{
+    width: 70%;
+}
+section#detail > div{
+    padding: 10px 0;
+    border-bottom: 1px solid #aaa;
+}
+section#detail > .one > div{
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    font-size: 0.8rem;
+}
+section#detail > .one > div > p{
+    padding: 0 6px;
+}
+section#detail > .two > div{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin: 10px 0;
+}
+section#detail > .two > div > p:nth-child(1){
+    width: 120px;
+}
+section#detail > .two > div > p > span{
+    display: inline-block;
+}
+.del{
+    background-color: rgb(225, 247, 239);
+    padding: 10px
+}
+.del > span{
+    display: inline-block;
+}
+.del > span:nth-child(1){
+    background-color: green;
+    color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+}
+/* section#book 영역 */
+section#book{
+    perspective: 1000px;
+    width: 40%;
+}
+.book-img{
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform-style: preserve-3d;
+    position: relative;
+    transition: all 0.5s;
+    box-shadow: 7px 7px 14px rgba(0, 0, 0, 0.5);
+}
+.book-img > .page{
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+}
+.book-img > .page > div{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateZ(25px);
+    backface-visibility: hidden;
+}
+.book-img > .page > .front{
+    background-image: url(../images/front-1.jfif);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.book-img > .page > .back{
+    background-image: url(../images/back-1.jfif);
+    background-size: cover;
+    background-repeat: no-repeat;
+    transform: rotateY(180deg) translateZ(25px);
+}
+.book-img > .side{
+    left: -25px;
+    width: 50px;
+    height: 100%;
+    background-image: url(../images/side-1.jfif);
+    transform: rotateY(-90deg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.book-img:not(.flipped):hover{
+    transform: rotateY(40deg);
+}
+.book-img.flipped{
+    transform: rotateY(180deg);
+}
+.front, .back, .side{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
