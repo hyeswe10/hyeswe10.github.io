@@ -1,0 +1,209 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
+body{
+    font-family: "Orbitron", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+#menu-icon{
+    font-size: 2rem;
+    position: fixed;
+    z-index: 10;
+    top: 20px;
+    left: 30px;
+    color: #fff;
+    animation: icon-move 0.5s infinite alternate;
+}
+@keyframes icon-move {
+    0%{
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(1.5);
+    }
+}
+
+/*** main ***/
+main{
+    height: 100%;
+    position: relative;
+}
+main > section{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+main > section > p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+section#box1{
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    color: #fff;
+    text-align: center;
+}
+section#box1 > p:nth-child(1){
+    grid-column: 1 / 3;
+    background-color: #222;
+    font-size: 2rem;
+}
+section#box1 > p:nth-child(2){
+    background-image: url(./images/m1.jpg);
+    background-size: cover;
+}
+section#box1 > p:nth-child(3){
+    background-color: #444;
+}
+section#box1 > p:nth-child(4){
+    background-color: #777;
+    font-size: 1.3rem;
+}
+section#box1 > p:nth-child(5){
+    background-color: #222;
+    background-image: url(./images/m3.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+section#box1 > p:nth-child(6){
+    grid-column: 3 / 5;
+    grid-row: 2 / 4;
+    background-image: url(./images/m2.jpg);
+    background-size: cover;
+}
+section#box1 > p:nth-child(7){
+    background-image: url(./images/m4.jpg);
+    background-size: cover;
+    background-position: center;
+}
+section#box1 > p:nth-child(8){
+    background-color: #444;
+    font-size: 1.3rem;
+}
+section#box1 > p:nth-child(9){
+    background-color: #444;
+    font-size: 1.3rem;
+}
+section#box1 > p:nth-child(10){
+    grid-column: 2 / 4;
+    background-image: url(./images/m5.jpg);
+    background-size: cover;
+    background-position: center;
+}
+section#box1 > p:nth-child(11){
+    background-color: #444;
+    font-size: 1.3rem;
+}
+/*** section#box2 ***/
+section#box2{
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    font-size: 1.3rem;
+    color: #fff;
+}
+section#box2 > p:nth-child(1){
+    background-color: #444;
+}
+section#box2 > p:nth-child(2){
+    background-image: url(./images/w1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+section#box2 > p:nth-child(3){
+    grid-column: 3 / 5;
+    background-color: #222;
+    font-size: 2rem;
+}
+section#box2 > p:nth-child(4){
+    grid-row: 2 / 4;
+    background-image: url(./images/w2.jpg);
+    background-size: cover;
+}
+section#box2 > p:nth-child(5){
+    grid-column: 2 / 4;
+    grid-row: 2 / 4;
+    background-image: url(./images/w3.jpg);
+    background-size: cover;
+    background-position: center;
+}
+section#box2 > p:nth-child(6){
+    background-image: url(./images/w4.jpg);
+    background-color: #222;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+section#box2 > p:nth-child(7){
+    background-color: #444;
+}
+section#box2 > p:nth-child(8){
+    background-image: url(./images/w5.jpg);
+    background-size: cover;
+    background-position: center;
+}
+section#box2 > p:nth-child(9){
+    background-color: #444;
+}
+section#box2 > p:nth-child(10){
+    background-image: url(./images/w6.jpg);
+    background-size: cover;
+    background-position: center;
+}
+section#box2 > p:nth-child(11){
+    background-image: url(./images/w7.jpg);
+    background-size: cover;
+    background-position: center;
+}
+/*** section#box3 ***/
+section#box3{
+    grid-template-columns: repeat(4,1fr);
+    grid-template-areas: 
+    "kid1 kid1 text1 kid2"
+    "kid1 kid1 text2 text2"
+    "kid1 kid1 kid3 text3"
+    "kid1 kid1 kid3 kid4";
+    color: #fff;
+    font-size: 1.3rem;
+}
+section#box3 > p:nth-child(1){
+    grid-area: kid1;
+    background-image: url(./images/k1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+section#box3 > p:nth-child(2){
+    grid-area: text1;
+    background-color: #444;
+}
+section#box3 > p:nth-child(3){
+    grid-area: kid2;
+    background-image: url(./images/k2.jpg);
+    background-size: cover;
+    background-position: center;
+}
+section#box3 > p:nth-child(4){
+    grid-area: text2;
+    background-color: #222;
+    font-size: 2rem;
+}
+section#box3 > p:nth-child(5){
+    grid-area: kid3;
+    background-image: url(./images/k3.jpg);
+    background-size: cover;
+}
+section#box3 > p:nth-child(6){
+    grid-area: text3;
+    background-color: #777;
+}
+section#box3 > p:nth-child(7){
+    grid-area: kid4;
+    background-image: url(./images/k4.jpg);
+    background-size: cover;
+    background-position: center;
+}
