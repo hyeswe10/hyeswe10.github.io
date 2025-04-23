@@ -33,6 +33,16 @@ nav{
     left: 0;
     z-index: 2;
 }
+nav > img{
+    display: block;
+    width: 60%;
+    margin: 10rem auto;
+}
+nav > ul > li{
+    text-align: center;
+    margin: 2rem 0;
+    font-size: 1.3rem;
+}
 
 /*** main ***/
 main{
