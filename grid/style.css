@@ -1,25 +1,33 @@
 @charset "utf-8";
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
 body{
-  font-family: "Orbitron", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-  perspective: 900px;
-  background-color: #222;
+    font-family: "Orbitron", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    perspective: 900px;
+    background-color: #222;
 }
 input{
-  position: fixed;
-  z-index: 15;
+    position: fixed;
+    z-index: 15;
+}
+input[id=check-icon]:checked ~ nav{
+    transform: rotateY(15deg);
+    opacity: 1;
+}
+input[id=check-icon]:checked ~ main{
+    transform: rotateY(-10deg);
 }
 #menu-icon{
-  font-size: 2rem;
-  position: fixed;
-  z-index: 10;
-  top: 30px;
-  left: 30px;
-  color: #fff;
-  animation: icon-move 0.5s infinite alternate;
+    cursor: pointer;
+    font-size: 2rem;
+    position: fixed;
+    z-index: 10;
+    top: 30px;
+    left: 30px;
+    color: #fff;
+    animation: icon-move 0.5s infinite alternate;
 }
 @keyframes icon-move {
   0%{
@@ -30,154 +38,173 @@ input{
   }
 }
 /*** nav ***/
+input[id=menu1]:checked ~ main > #box1, 
+input[id=menu2]:checked ~ main > #box2, 
+input[id=menu3]:checked ~ main > #box3{
+    opacity: 1;
+}
+input[id=menu1]:checked ~ main > #box1 > p,
+input[id=menu2]:checked ~ main > #box2 > p,
+input[id=menu3]:checked ~ main > #box3 > p{
+    transform: rotateY(0deg);
+}
 nav{
-  width: 150px;
-  height: 100%;
-  background-color: #ddd;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 2;
-  transform: rotateY(15deg);
-  transform-origin: left center;
+    width: 150px;
+    height: 100%;
+    background-color: #ddd;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    transform: rotateY(120deg);
+    transform-origin: left center;
+    opacity: 0;
+    transition: all 0.5s;
 }
 nav > img{
-  display: block;
-  width: 60%;
-  margin: 7rem auto;
+    display: block;
+    width: 60%;
+    margin: 7rem auto;
 }
 nav > ul > li{
-  text-align: center;
-  margin: 2rem 0;
-  font-size: 1.5rem;
+    text-align: center;
+    margin: 2rem 0;
+    font-size: 1.5rem;
+}
+nav > ul > li > label{
+    cursor: pointer;
 }
 /**** main *****/
 main{
-  height: 100%;
-  position: relative;
-  transform: rotateY(-10deg);
-  transform-origin: right center;
+    height: 100%;
+    position: relative;
+    transform: rotateY(0deg);
+    transform-origin: right center;
+    transition: all 0.5s;
 }
 main > section{
-  width: 100%;
-  height: 100%;
-  display: grid;
-  position: absolute;
-  top: 0;
-  left: 0;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
 }
 main > section > p{
-  font-size: 2rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #333;
-  color: #fff;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #333;
+    color: #fff;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transform: rotateY(180deg);
+    transition: all 1s;
 }
 section#box1{
-  z-index: 1;
-  grid-template-columns: repeat(4,1fr);
-  grid-template-rows: repeat(4,1fr);
+    z-index: 1;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(4,1fr);
 }
 section#box1 > p:nth-child(1){
-  grid-column: 1 / 3;  
-  font-size: 3rem;
+    grid-column: 1 / 3;  
+    font-size: 3rem;
 }
 section#box1 > p:nth-child(2){
-  background-image: url(./images/m1.jpg);
+    background-image: url(./images/m1.jpg);
 }
 section#box1 > p:nth-child(4){
-  background-color: #666;
+    background-color: #666;
 }
 section#box1 > p:nth-child(5){
-  background-image: url(./images/m3.jpg);
-  background-size: contain;
-  background-position: left center;
+    background-image: url(./images/m3.jpg);
+    background-size: contain;
+    background-position: left center;
 }
 section#box1 > p:nth-child(6){
   /* grid-column: 3 / 5; */
-  grid-column: 3 / span 2;
+    grid-column: 3 / span 2;
   /* grid-row: 2 / 4; */
-  grid-row: 2 / span 2;
-  background-image: url(./images/m2.jpg);
+    grid-row: 2 / span 2;
+    background-image: url(./images/m2.jpg);
 }
 section#box1 > p:nth-child(7){
-  background-image: url(./images/m4.jpg);
+    background-image: url(./images/m4.jpg);
 }
 section#box1 > p:nth-child(10){
-  grid-column: 2 / 4;
-  background-image: url(./images/m5.jpg);
+    grid-column: 2 / 4;
+    background-image: url(./images/m5.jpg);
 }
 
 section#box2{
-  grid-template-columns: repeat(4,1fr);
-  grid-template-rows: repeat(4,1fr);
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(4,1fr);
 }
 section#box2 > p:nth-child(2){
-  background-image: url(./images/w1.jpg);
+    background-image: url(./images/w1.jpg);
 }
 section#box2 > p:nth-child(3){
-  grid-column: 3 / 5;
-  font-size: 3rem;
+    grid-column: 3 / 5;
+    font-size: 3rem;
 }
 section#box2 > p:nth-child(4){
-  grid-row: 2 / 4;
-  background-image: url(./images/w2.jpg);
+    grid-row: 2 / 4;
+    background-image: url(./images/w2.jpg);
 }
 section#box2 > p:nth-child(5){
-  grid-column: 2 / 4;
-  grid-row: 2 / 4;
-  background-image: url(./images/w3.jpg);
+    grid-column: 2 / 4;
+    grid-row: 2 / 4;
+    background-image: url(./images/w3.jpg);
 }
 section#box2 > p:nth-child(6){
-  background-image: url(./images/w4.jpg);
+    background-image: url(./images/w4.jpg);
 }
 section#box2 > p:nth-child(8){
-  background-image: url(./images/w5.jpg);
+    background-image: url(./images/w5.jpg);
 }
 section#box2 > p:nth-child(10){
-  background-image: url(./images/w6.jpg);
+    background-image: url(./images/w6.jpg);
 }
 section#box2 > p:nth-child(11){
-  background-image: url(./images/w7.jpg);
+    background-image: url(./images/w7.jpg);
 }
 
 section#box3{
-  grid-template-columns: repeat(4,1fr);
-  grid-template-areas: 
-  "kid1 kid1 text1 kid2"
-  "kid1 kid1 text2 text2"
-  "kid1 kid1 kid3 text3"
-  "kid1 kid1 kid3 kid4";
+    grid-template-columns: repeat(4,1fr);
+    grid-template-areas: 
+    "kid1 kid1 text1 kid2"
+    "kid1 kid1 text2 text2"
+    "kid1 kid1 kid3 text3"
+    "kid1 kid1 kid3 kid4";
 }
 section#box3 > p:nth-child(1){
-  grid-area: kid1;
-  background-image: url(./images/k1.jpg);
+    grid-area: kid1;
+    background-image: url(./images/k1.jpg);
 }
 section#box3 > p:nth-child(2){
-  grid-area: text1;
-  background-color: #555;
+    grid-area: text1;
+    background-color: #555;
 }
 section#box3 > p:nth-child(3){
-  grid-area: kid2;
-  background-image: url(./images/k2.jpg);
+    grid-area: kid2;
+    background-image: url(./images/k2.jpg);
 }
 section#box3 > p:nth-child(4){
-  grid-area: text2;
-  background-color: #222;
+    grid-area: text2;
+    background-color: #222;
 }
 section#box3 > p:nth-child(5){
-  grid-area: kid3;
-  background-image: url(./images/k3.jpg);
+    grid-area: kid3;
+    background-image: url(./images/k3.jpg);
 }
 section#box3 > p:nth-child(6){
-  grid-area: text3;
-  background-color: #666;
+    grid-area: text3;
+    background-color: #666;
 }
 section#box3 > p:nth-child(7){
-  grid-area: kid4;
-  background-image: url(./images/k4.jpg);
+    grid-area: kid4;
+    background-image: url(./images/k4.jpg);
 }
