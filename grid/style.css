@@ -9,8 +9,7 @@ body{
     background-color: #222;
 }
 input{
-    position: fixed;
-    z-index: 15;
+    display: none;
 }
 input[id=check-icon]:checked ~ nav{
     transform: rotateY(15deg);
