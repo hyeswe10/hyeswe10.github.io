@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>로그인</title>
+    <style>
+        *{ margin: 0; padding: 0; box-sizing: border-box; }
+        body{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        body > div{
+            padding: 50px;
+            border: 1px solid #aaa;
+            border-radius: 10px;
+            box-shadow: 0 0 5px #666;
+        }
+        body > div > h1{
+            text-align: center;
+            margin: 30px 0;
+        }
+        fieldset{
+            margin: 30px 0;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        fieldset > input{
+            display: block;
+            padding: 5px 10px;
+            width: 100%;
+        }
+        fieldset > input[type=checkbox]{
+            display: inline-block !important;
+            width: 20px;
+        }
+        fieldset > input:focus{
+            border: 2px solid dodgerblue;
+            outline: none;
+        }
+        button{
+            width: 100%;
+            padding: 10px;
+            background-color: #888;
+            color: #fff;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover{
+            background-color: dodgerblue;
+        }
+    </style>
+  </head>
+  <body>
+    <div>
+      <h1>LOGIN</h1>
+      <p>로그인을 하시면 더욱 편하게 이용하실 수 있습니다</p>
+      <fieldset>
+        <legend>ID/전화번호</legend>
+        <input type="text" placeholder="아이디 또는 전화번호" autofocus required/>
+        <input type="password" placeholder="비밀번호">
+        <input type="checkbox" id="check">
+        <label for="check">로그인 상태 유지</label>
+      </fieldset>
+      <button>로그인</button>
+    </div>
+  </body>
+</html>

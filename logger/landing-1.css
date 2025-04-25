@@ -226,7 +226,7 @@ main#about > .title > h2, main#notice > .title > h2{
 }
 main#content > .detail > p{
     margin: 20px 0;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     line-height: 1.5;
 }
 main#content > .detail > img{
@@ -267,8 +267,6 @@ main#about > .detail > table > tbody > tr{
     padding-right: 20px;
  }
  main#about > .detail > table > thead{
-    display: flex;
-    justify-content: flex-start;
     font-size: 1.5rem;
     font-weight: bold;
     border-bottom: 1px solid #fff;

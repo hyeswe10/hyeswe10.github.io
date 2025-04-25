@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>input태그</title>
+    <style>
+      li{
+        list-style: none;
+      }
+    </style>
+  </head>
+  <body>
+    <form>
+      <fieldset>
+        <legend>개인정보</legend>
+        <label
+          >로그인
+          <input type="text" size="5"/>
+        </label>
+        <br>
+        <label>비밀번호
+            <input type="password">
+        </label>
+        <br>
+        <label>검색
+          <input type="search">
+        </label>
+        <br>
+        <label>전화번호
+          <input type="tel">
+        </label>
+      </fieldset>
+      <fieldset>
+        <legend>상품선택</legend>
+        <h3>주문할 상품을 선택해 주세요</h3>
+        <ul>
+          <li>
+            <input type="checkbox" id="s-3" checked>
+            <label for="s-3">선물용 3kg</label>
+            <input type="number" id="c-3" min="1" max="5" value="1" step="2">
+            <label for="c-3">개(최대5개)</label>
+          </li>
+          <li>
+            <input type="checkbox" id="s-4">
+            <label for="s-4">선물용 4kg</label>
+            <input type="range" id="c-4" min="1" max="10">
+            <label for="c-4">개(최대10개)</label>
+          </li>
+          <li>
+            <input type="checkbox" id="s-5">
+            <label for="s-5">선물용 5kg</label>
+          </li>
+        </ul>
+        <h3>포장선택</h3>
+        <ul>
+          <li>
+            <input type="radio" id="yes" name="gift" checked>
+            <label for="yes">선물포장</label>
+          </li>
+          <li>
+            <input type="radio" id="no" name="gift">
+            <label for="no">선물포장안함</label>
+          </li>
+        </ul>
+      </fieldset>
+      <input type="date">
+      <input type="month">
+      <input type="week">
+      <input type="submit">
+      <input type="reset">
+    </form>
+  </body>
+</html>

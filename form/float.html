@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>float 속성 알아보기</title>
+    <style>
+        body{
+            background-color: #888;
+        }
+        div{
+            width: 100px;
+            height: 100px;
+            text-align: center;
+            line-height: 100px;
+            border: 1px solid #222;
+            background-color: tomato;
+            float: left;
+        }
+        .box4{
+            float: right;
+        }
+        .box4:after{
+            content: "";
+            display: block;
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1">BOX1</div>
+    <div class="box2">BOX2</div>
+    <div class="box3">BOX3</div>
+    <div class="box4">BOX4</div>
+    <div style="clear: both;"></div>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint quasi, laborum aliquid laudantium corrupti, quidem eos delectus, quam cum esse veniam sed porro temporibus ut sunt! Asperiores accusantium enim a.</p>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>사장학개론</title>
+  </head>
+  <body>
+    <div id="screen">
+      <div class="book">
+        <div class="page">
+          <div class="front"></div>
+          <div class="back"></div>
+        </div>
+        <div class="side"></div>
+      </div>
+      <div id="text">
+        <div class="box">
+          <p>소득공제</p>
+          <p>강력추천</p>
+          <p>오늘의책</p>
+        </div>
+        <h2>[예스리커버] 사장학개론</h2>
+        <div class="writer">
+            <p>김승호 저</p>
+            <p>스노우폭스북스</p>
+            <p>2023년 04월 19일</p>
+        </div>
+      </div>
+    </div>
+    <script>
+      const book = document.querySelector(".book");
+      book.addEventListener("click", () => {
+        book.classList.toggle("flipped");
+      });
+    </script>
+  </body>
+</html>

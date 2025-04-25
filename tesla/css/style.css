@@ -1,0 +1,94 @@
+@charset "utf-8";
+:root{
+    --text-light-color:#eee;
+    --font-size: 14px;
+    --button-color: #3e6ae1;
+}
+/* mobile size를 기본 */
+body{
+    background-color: rgb(17, 154, 218);
+}
+/* header 영역 */
+header{
+    height: 100%;
+    position: relative; 
+    background-image: url(../assets/images/Homepage-Model-Y-2-Hero-Mobile-APAC-LHD.jfif);
+    background-size: cover;
+    background-position: center;
+}
+header > nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--text-light-color);
+    font-size: var(--font-size);
+    padding: 10px 0;
+}
+header > nav > h1{
+    padding: 10px 20px;
+    letter-spacing: 10px;
+}
+header > nav > p{
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    padding: 7px 20px;
+    border-radius: 7px;
+    margin-right: 10px;
+}
+header > nav > ul{
+    display: none;
+}
+header > nav > ul > li{
+    display: inline-block;
+    padding: 7px;
+}
+/* 페이지별 h2 타이틀 */
+.title{
+    color: var(--text-light-color);
+    font-size: 3rem;
+    text-align: center;
+}
+/* button style */
+.btn-color{
+    background-color: var(--button-color);
+    color: var(--text-light-color);
+}
+.btn-white{
+    background-color: var(--text-light-color);
+    color: #222;
+}
+.btn{
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 50px;
+
+}
+.btn > p{
+    width: 150px;
+    text-align: center;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+/* section 공통 스타일 */
+section{
+    height: 100%;
+}
+/* max : 0~1023px */
+/* min : 1024px~ */
+/* @media screen and (min-width:769px) and (max-width:1024px) {} */
+@media screen and (min-width:1024px){
+    header{
+        background-image: url(../assets/images/Homepage-Model-Y-2-Hero-Desktop-APAC-LHD.jfif);
+        background-position: center;
+    }
+    header > nav > p{
+        display: none;
+    }
+    header > nav > ul{
+        display: block;
+    }
+}

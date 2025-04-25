@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/reset.css">
+    <title>북 로테이트</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            perspective: 800px;
+        }
+        .book{
+            transform-style: preserve-3d;
+            transition: all 1s;
+            transform: rotateY(0);
+            transform-origin: center;
+            display: flex;
+            cursor: url(./images/img-1.png), auto;
+        }
+        .book:hover{
+            transform: rotateY(40deg);
+        }
+        .front, .back{
+            width: 200px;
+            height: 300px;
+            background-color: tomato;
+            border-radius: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.5rem;
+            font-weight: bolder;
+        }
+        .side{
+            width: 50px;
+            height: 300px;
+            background-color: yellowgreen;
+            transform: rotateY(-90deg);
+            transform-origin: right;
+        }
+        .back{
+            transform: rotateY(-180deg) translateZ(50px) translateX(-250px);
+        }
+    </style>
+</head>
+<body>
+    <div class="book">
+        <div class="back">뒷면</div>
+        <div class="side">1</div>
+        <div class="front">책표지</div>
+    </div>
+</body>
+</html>
