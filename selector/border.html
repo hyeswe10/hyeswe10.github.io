@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>호버이벤트</title>
+    <style>
+        *{ margin: 0; padding: 0; }
+        a{ 
+            text-decoration: none; 
+            color: inherit;
+            font-size: 3rem;
+            font-weight: bold;
+        }
+        body{ 
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container{
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+        .item1{
+            position: relative;
+        }
+        .item1:hover:after{
+            width: 100%;
+        }
+        .item1:after{
+            content: "";
+            position: absolute;
+            width: 0;
+            height: 5px;
+            background-color: dodgerblue;
+            bottom: 0;
+            left: 0;
+            transition: all 0.5s;
+        }
+        .item2{
+            position: relative;
+        }
+        .item2:hover:after{
+            width: 100%;
+        }
+        .item2:after{
+            content: "";
+            position: absolute;
+            width: 0;
+            height: 5px;
+            background-color: dodgerblue;
+            bottom: 0;
+            right: 0;
+            transition: all 0.5s;
+        }
+        .item3{
+            position: relative;
+        }
+        .item3:after{
+            content: "";
+            position: absolute;
+            width: 7px;
+            height: 7px;
+            background-color: dodgerblue;
+            bottom: 0;
+            left: 0;
+            transition: all 0.5s;
+        }
+        .item3:hover:after{
+            left: 100%;
+        }
+        .item4{
+            position: relative;
+        }
+        .item4:hover:after{
+            width: 100%;
+        }
+        .item4:after{
+            content: "";
+            position: absolute;
+            width: 0;
+            height: 5px;
+            background-color: dodgerblue;
+            bottom: 0;
+            left: 50%;
+            transition: all 0.5s;
+            transform: translate(-50%);
+        }
+        .item5{
+            position: relative;
+        }
+        .item5:hover:after{
+            width: 0;
+        }
+        .item5:after{
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 5px;
+            background-color: dodgerblue;
+            bottom: 0;
+            left: 50%;
+            transition: all 0.5s;
+            transform: translate(-50%);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="#" class="item1">Web Publish Class</a>
+        <a href="#" class="item2">Web Publish Class</a>
+        <a href="#" class="item3">Web Publish Class</a>
+        <a href="#" class="item4">Web Publish Class</a>
+        <a href="#" class="item5">Web Publish Class</a>
+    </div>
+</body>
+</html>

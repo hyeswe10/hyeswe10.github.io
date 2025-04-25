@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{ margin: 0; padding: 0; }
+        li{ list-style: none; }
+        ul{
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        }
+        nav a:link{
+            text-decoration: none;
+            color: tomato;
+        }
+        nav a:hover{
+            background-color: #000;
+            color: #fff;
+        }
+        /* ul > li:first-child{
+            background-color: tomato;
+        } */
+        ul > li:nth-child(even){
+            background-color: tomato;
+        }
+        ul > li:nth-child(3n){
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#">이용안내</a></li>
+            <li><a href="#">객실소개</a></li>
+            <li><a href="#">예약 방법 및 요금</a></li>
+            <li><a href="#">예약하기</a></li>
+            <li><a href="#">상담하기</a></li>
+            <li><a href="#">위치찾기</a></li>
+            <li><a href="#">예약하기</a></li>
+        </ul>
+    </nav>
+</body>
+</html>

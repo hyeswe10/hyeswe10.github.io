@@ -1,0 +1,19 @@
+@charset "utf-8";
+
+*{ margin: 0; padding: 0; }
+body{
+    height: 100vh;
+}
+.container{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+.container > div{
+    width: 200px;
+    height: 200px;
+    border: 1px solid #000;
+    border-radius: 50%;
+}
