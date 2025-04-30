@@ -1,0 +1,329 @@
+body {
+  background-color: #eee;
+  color: #222;
+}
+
+header .mobile-search {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1rem;
+  font-size: 14px;
+  padding: 1rem 0;
+  border: 1px solid #ddd;
+  -webkit-box-shadow: 5px 5px 20px #ddd;
+          box-shadow: 5px 5px 20px #ddd;
+  width: 90%;
+  margin: 1rem auto;
+  border-radius: 50px;
+}
+@media screen and (min-width: 768px) {
+  header .mobile-search {
+    display: none;
+  }
+}
+@media screen and (min-width: 1024px) {
+  header .mobile-search {
+    display: none;
+  }
+}
+header .logo {
+  padding: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1rem;
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  header .logo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+@media screen and (min-width: 1024px) {
+  header .logo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+header .logo h1 {
+  font-size: 3rem;
+}
+header .logo h1 i {
+  color: #ff385c;
+}
+header .logo .menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1rem;
+}
+header .logo .menu .icon {
+  border: 1px solid #888;
+  border-radius: 20px;
+  padding: 10px 15px;
+}
+header .logo .menu .icon i {
+  padding: 0 5px;
+}
+header .tablet-search {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  header .tablet-search {
+    display: block;
+  }
+}
+@media screen and (min-width: 1024px) {
+  header .tablet-search {
+    display: block;
+    position: relative;
+    top: -65px;
+  }
+}
+header .tablet-search .txt {
+  text-align: center;
+}
+header .tablet-search .txt h3 {
+  display: inline-block;
+  font-weight: normal;
+  margin: 0 1rem;
+}
+header .tablet-search .bar {
+  width: 80%;
+  margin: 1rem auto;
+  border: 1px solid #ddd;
+  -webkit-box-shadow: 0 2px 3px #ccc;
+          box-shadow: 0 2px 3px #ccc;
+  border-radius: 40px;
+  padding: 20px 25px;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0;
+}
+header .tablet-search .bar li {
+  padding-left: 2rem;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  border-right: 1px solid #888;
+  cursor: pointer;
+}
+header .tablet-search .bar li:hover {
+  background-color: #ddd;
+}
+header .tablet-search .bar li:first-child, header .tablet-search .bar li:nth-child(4) {
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
+}
+header .tablet-search .bar li:last-child {
+  position: absolute;
+  right: 10px;
+  background-color: #ff385c;
+  color: #eee;
+  padding: 13px;
+  border-radius: 50%;
+}
+header .tablet-search .bar li p:first-child {
+  font-size: 14px;
+}
+header .tablet-search .bar li p:last-child {
+  color: #b0b0b0;
+}
+header nav ul {
+  padding: 1rem;
+  white-space: nowrap;
+  overflow: hidden;
+  -webkit-box-shadow: 0 5px 10px #ddd;
+          box-shadow: 0 5px 10px #ddd;
+}
+header nav ul li {
+  display: inline-block;
+  width: 100px;
+  text-align: center;
+}
+header nav ul li img {
+  width: 50%;
+  opacity: 50%;
+}
+header nav ul li p {
+  font-size: 14px;
+}
+
+main {
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+main .card {
+  max-width: 500px;
+  cursor: pointer;
+  max-width: 500px;
+}
+main .card:nth-child(4) .img .top .guest {
+  opacity: 0;
+}
+main .card:nth-child(4) .txt div p {
+  opacity: 0;
+}
+main .card .img {
+  aspect-ratio: 1/1;
+  border-radius: 10px;
+  background-color: #888;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  gap: 1rem;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+main .card .img .top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1rem;
+}
+main .card .img .top .guest {
+  background-color: #fff;
+  border-radius: 20px;
+  font-size: 14px;
+  padding: 8px 15px;
+  -webkit-box-shadow: 0 5px 10px #888;
+          box-shadow: 0 5px 10px #888;
+}
+main .card .img .top i {
+  font-size: 24px;
+  color: #eee;
+}
+main .card .img .center {
+  opacity: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1rem;
+}
+main .card .img .center i {
+  font-size: 24px;
+  color: #eee;
+}
+main .card .img:hover .center {
+  opacity: 1;
+}
+main .card .img .bottom {
+  text-align: center;
+}
+main .card .img .bottom span {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+}
+main .card .txt {
+  margin: 1rem 0;
+}
+main .card .txt div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1rem;
+}
+main .card .txt div h2 {
+  font-size: 16px;
+}
+main .card .txt div p {
+  color: #222;
+}
+main .card .txt p {
+  color: #888;
+}
+main .card .txt p span {
+  color: #222;
+}
+main .card .txt p:last-child {
+  margin-top: 15px;
+}
+
+footer h2, footer h3 {
+  font-weight: normal;
+  margin: 1rem 0;
+}
+footer h3 {
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 1rem;
+}
+footer h3 span {
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #222;
+}
+footer ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 2rem;
+  font-size: 14px;
+}
+footer p {
+  padding: 1rem 0;
+  text-align: center;
+}/*# sourceMappingURL=style.css.map */
