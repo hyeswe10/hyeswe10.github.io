@@ -1,0 +1,18 @@
+@font-face {
+  font-family: 'NanumSquareNeo';
+  font-style: normal;
+  font-weight: 200;
+  src: url('../font/NanumSquareNeo-aLt.ttf') format('truetype');
+ }
+@font-face {
+  font-family: 'NanumSquareNeo';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../font/NanumSquareNeo-bRg.ttf') format('truetype');
+ }
+@font-face {
+  font-family: 'NanumSquareNeo';
+  font-style: normal;
+  font-weight: 600;
+  src: url('../font/NanumSquareNeo-dEb.ttf') format('truetype');
+ }
