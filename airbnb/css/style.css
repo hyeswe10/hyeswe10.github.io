@@ -305,6 +305,9 @@ main .card .txt p:last-child {
   margin-top: 15px;
 }
 
+footer {
+  padding: 0 2rem;
+}
 footer h2, footer h3 {
   font-weight: normal;
   margin: 1rem 0;
@@ -324,6 +327,7 @@ footer ul {
   font-size: 14px;
 }
 footer p {
-  padding: 1rem 0;
+  padding-top: 3rem;
+  padding-bottom: 2rem;
   text-align: center;
 }/*# sourceMappingURL=style.css.map */
