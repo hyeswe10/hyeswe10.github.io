@@ -1,0 +1,642 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "NanumSquareNeo", sans-serif;
+  color: #3d3d3d;
+}
+
+header {
+  width: 100%;
+  height: 900px;
+  background-image: url(../images/head-back.jpg);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 10rem;
+}
+header:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+header .top-line {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: flex;
+      -ms-flex-align: flex;
+          align-items: flex;
+  height: 100px;
+  width: 100%;
+  z-index: 1;
+  position: relative;
+}
+header .top-line .logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0.5rem 3rem;
+}
+header .top-line .logo img {
+  width: 100px;
+}
+header .top-line .logo h1 {
+  font-weight: 600;
+  font-size: 2.1rem;
+  color: #eee;
+  letter-spacing: 3px;
+}
+@media screen and (max-width: 768px) {
+  header .top-line .logo h1 {
+    display: none;
+  }
+}
+header .top-line nav {
+  height: 100px;
+}
+@media screen and (max-width: 768px) {
+  header .top-line nav {
+    display: none;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+  header .top-line nav {
+    display: none;
+  }
+}
+header .top-line nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 7rem;
+  height: 100%;
+  padding: 0 5rem;
+}
+header .top-line nav ul li {
+  color: #eee;
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding: 7px;
+}
+header .top-line nav ul li:hover {
+  background-color: #777;
+}
+header .explain {
+  height: 150px;
+  margin-top: 5rem;
+  position: relative;
+  z-index: 1;
+  color: #eee;
+}
+@media screen and (max-width: 768px) {
+  header .explain {
+    padding: 0 2rem;
+  }
+}
+header .explain h2 {
+  position: relative;
+  font-size: 6rem;
+  margin-bottom: 1rem;
+  z-index: 3;
+}
+@media screen and (max-width: 768px) {
+  header .explain h2 {
+    font-size: 4rem;
+  }
+}
+header .explain p {
+  position: relative;
+  font-size: 2rem;
+  letter-spacing: 10px;
+  z-index: 3;
+}
+
+section#intro {
+  height: 1400px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+section#intro .system {
+  width: 100%;
+  padding-bottom: 5rem;
+  text-align: center;
+}
+section#intro .system .title {
+  padding-bottom: 3rem;
+}
+section#intro .system .title p {
+  letter-spacing: 3px;
+  font-size: 1.2rem;
+  padding: 1rem;
+}
+section#intro .system .title h2 {
+  font-size: 3rem;
+}
+section#intro .system p {
+  font-size: 1.3rem;
+  padding: 0.5rem 2rem;
+}
+section#intro .sys-img {
+  width: 80%;
+  height: 700px;
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 20px;
+}
+
+section#about {
+  padding: 2rem 0;
+  width: 100%;
+  height: 700px;
+  background-color: #fafafa;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+@media screen and (max-width: 768px) {
+  section#about {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 3rem;
+    height: 900px;
+  }
+}
+@media screen and (max-width: 768px) {
+  section#about .txt {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+section#about .txt .title {
+  width: 70%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+section#about .txt .title .sub-title {
+  letter-spacing: 3px;
+  font-size: 1.2rem;
+  padding: 1rem;
+}
+section#about .txt .title h2 {
+  font-size: 3rem;
+}
+section#about .txt nav {
+  width: 70%;
+  padding: 2rem 0;
+}
+section#about .txt nav ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 5rem;
+  padding: 15px 20px;
+  margin: 10px 0;
+  border: 1px solid #888;
+  border-radius: 10px;
+}
+section#about .txt nav ul li div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+section#about .txt nav ul li div a {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+section#about .txt nav ul li div a:hover {
+  background-color: #ddd;
+  font-size: 1.6rem;
+}
+section#about .txt nav ul li div p {
+  padding: 10px 0;
+}
+section#about .ab-img {
+  width: 40%;
+  height: 70%;
+  background-position: center;
+  background-size: cover;
+  border-radius: 20px;
+}
+@media screen and (max-width: 768px) {
+  section#about .ab-img {
+    width: 80%;
+  }
+}
+
+section#info {
+  width: 100%;
+  height: 1000px;
+  background-image: url(../images/info-img.jpg);
+  background-size: cover;
+  background-position: bottom;
+  position: relative;
+  color: #eee;
+}
+section#info:after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1;
+}
+section#info .top {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+section#info .top .priority {
+  padding-top: 5rem;
+}
+section#info .top .priority p {
+  letter-spacing: 3px;
+  font-size: 1.2rem;
+  padding: 1rem;
+}
+section#info .top .priority h2 {
+  font-size: 3rem;
+}
+section#info .top .extra {
+  padding: 2rem;
+  font-size: 1.3rem;
+}
+section#info nav {
+  width: 100%;
+  height: 50%;
+}
+section#info nav ul {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 3rem 0;
+  gap: 2rem;
+}
+@media screen and (max-width: 768px) {
+  section#info nav ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    z-index: 2;
+    gap: 3rem;
+  }
+}
+section#info nav ul li {
+  padding: 2rem;
+  width: 18%;
+  height: 100%;
+  text-align: center;
+  z-index: 2;
+  border-radius: 20px;
+  background-color: rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 2px 5px 5px #eee;
+          box-shadow: 2px 5px 5px #eee;
+}
+@media screen and (max-width: 768px) {
+  section#info nav ul li {
+    width: 50%;
+    height: 20%;
+  }
+}
+section#info nav ul li a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 4rem;
+}
+@media screen and (max-width: 768px) {
+  section#info nav ul li a {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    gap: 2rem;
+  }
+}
+section#info nav ul li a .icon {
+  font-size: 10rem;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+@media screen and (max-width: 768px) {
+  section#info nav ul li a .icon {
+    border: none;
+    font-size: 4rem;
+  }
+}
+section#info nav ul li a h3 {
+  font-size: 2.3rem;
+  padding-top: 3rem;
+}
+@media screen and (max-width: 768px) {
+  section#info nav ul li a h3 {
+    font-size: 2rem;
+    padding-top: 0;
+  }
+}
+section#info nav ul li a p {
+  padding: 0 2rem;
+}
+@media screen and (max-width: 768px) {
+  section#info nav ul li a p {
+    display: none;
+  }
+}
+
+section#recruit {
+  width: 100%;
+  height: 1000px;
+  margin-bottom: 100px;
+}
+section#recruit .vision .title {
+  width: 100%;
+  text-align: center;
+  padding-top: 5rem;
+  padding-bottom: 3rem;
+}
+section#recruit .vision .title p {
+  letter-spacing: 3px;
+  font-size: 1.2rem;
+  padding: 1rem;
+}
+section#recruit .vision .title h2 {
+  font-size: 3rem;
+}
+section#recruit .vision p {
+  text-align: center;
+  font-size: 1.3rem;
+}
+section#recruit .img {
+  width: 100%;
+  height: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 3rem;
+}
+section#recruit .img div {
+  width: 40%;
+  height: 70%;
+  background-position: center;
+  background-size: cover;
+  border-radius: 20px;
+}
+
+footer {
+  width: 100%;
+  height: 1000px;
+}
+footer .foot-img {
+  width: 100%;
+  height: 600px;
+  background-image: url(../images/foot-img.jpg);
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 2rem;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+footer .foot-img:after {
+  width: 100%;
+  height: 100%;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+footer .foot-img p {
+  position: relative;
+  color: #eee;
+  z-index: 2;
+  font-size: 2rem;
+  font-weight: 600;
+  padding: 2rem;
+}
+footer .foot-img button {
+  z-index: 2;
+  position: relative;
+  background-color: #007BFF;
+  color: #eee;
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+footer .foot-img button:hover {
+  background-color: #004a99;
+}
+footer .top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1rem;
+}
+footer .top .f-logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+footer .top .f-logo img {
+  width: 100px;
+}
+footer .top nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+footer .top nav ul li {
+  padding: 0 2rem;
+}
+footer .top nav ul li:nth-of-type(1) {
+  border-right: 1px solid #3d3d3d;
+}
+footer .top nav ul li a:hover {
+  text-decoration: underline;
+}
+footer .bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-left: 2rem;
+}
+footer .bottom .label p {
+  padding: 0.5rem;
+  margin-right: 1rem;
+}
+footer .bottom .answer p {
+  padding: 0.5rem;
+}
+footer .rights {
+  padding: 2rem 5rem;
+}/*# sourceMappingURL=style.css.map */

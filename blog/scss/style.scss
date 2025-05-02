@@ -1,0 +1,465 @@
+$main-color:#007BFF;
+$sub-color:#28A745;
+$main-font:#3d3d3d;
+$white-font:#eee;
+
+@mixin mobile{
+    @media screen and (max-width:768px){
+        @content;
+    }
+}
+@mixin tablet{
+    @media screen and (min-width:768px) and (max-width:1200px){
+        @content;
+    }
+}
+
+@mixin flex($justify:center, $align:center){
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: 'NanumSquareNeo', sans-serif;
+    color: $main-font;
+}
+header{
+    width: 100%;
+    height: 900px;
+    background-image: url(../images/head-back.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    @include flex(space-between,center);
+    flex-direction: column;
+    gap: 10rem;
+    &:after{
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-color: rgba(0,0,0,0.3);
+    }
+    .top-line{
+        @include flex(space-between, flex);
+        height: 100px;
+        width: 100%;
+        z-index: 1;
+        position: relative;
+        .logo{
+            @include flex(flex-start,center);
+            padding: 0.5rem 3rem;
+            img{
+                width: 100px;
+            };
+            h1{
+                font-weight: 600;
+                font-size: 2.1rem;
+                color: $white-font;
+                letter-spacing: 3px;
+                @include mobile{
+                    display: none;
+                }
+            }
+        }
+        nav{
+            height: 100px;
+            @include mobile{
+                display: none;
+            }
+            @include tablet{
+                display: none;
+            }
+            
+            ul{
+                @include flex(flex-end,center);
+                gap: 7rem;
+                height: 100%;
+                padding: 0 5rem;
+                li{
+                    color: $white-font;
+                    font-size: 1.2rem;
+                    font-weight: 600;
+                    padding: 7px;
+                    &:hover{
+                        background-color: #777;
+                    }
+                }
+            }
+        }
+    }
+    .explain{
+        height: 150px;
+        margin-top: 5rem;
+        position: relative;
+        z-index: 1;
+        color: $white-font;
+        @include mobile{
+            padding: 0 2rem;
+        }
+        h2{
+            position: relative;
+            font-size: 6rem;
+            margin-bottom: 1rem;
+            z-index: 3;
+            @include mobile{
+                font-size: 4rem;
+            }
+        }
+        p{
+            position: relative;
+            font-size: 2rem;
+            letter-spacing: 10px;
+            z-index: 3;
+        }
+    }
+    
+}
+section#intro{
+    height: 1400px;
+    @include flex();
+    flex-direction: column;
+    .system{
+        width: 100%;
+        padding-bottom: 5rem;
+        text-align: center;
+        .title{
+            padding-bottom: 3rem;
+            p{
+                letter-spacing: 3px;
+                font-size: 1.2rem;
+                padding: 1rem;
+            }
+            h2{
+                font-size: 3rem;
+            }
+        }
+        p{
+            font-size: 1.3rem;
+            padding: 0.5rem 2rem;
+        }
+    }
+    .sys-img{
+        width: 80%;
+        height: 700px;
+        background-position: top;
+        background-size: cover;
+        background-repeat: no-repeat;
+        border-radius: 20px
+    }
+}
+section#about{
+    padding: 2rem 0;
+    width: 100%;
+    height: 700px;
+    background-color: #fafafa;
+    @include flex();
+    @include mobile{
+        flex-direction: column;
+        gap: 3rem;
+        height: 900px;
+    }
+    .txt{
+        @include mobile{
+            @include flex();
+            flex-direction: column;
+        }
+        .title{
+            width: 70%;
+            @include flex(flex-start,flex-start);
+            flex-direction: column;
+            .sub-title{
+                letter-spacing: 3px;
+                font-size: 1.2rem;
+                padding: 1rem;
+            }
+            h2{
+                font-size: 3rem;
+            }
+        }
+        nav{
+            width: 70%;
+            padding: 2rem 0;
+            ul{
+                li{
+                    @include flex(space-between,center);
+                    gap: 5rem;
+                    padding: 15px 20px;
+                    margin: 10px 0;
+                    border: 1px solid #888;
+                    border-radius: 10px;
+                    div{
+                        @include flex(flex-start, flex-start);
+                        flex-direction: column;
+                        a{
+                            font-size: 1.5rem;
+                            font-weight: 600;
+                            &:hover{
+                                background-color: #ddd;
+                                font-size: 1.6rem;
+                            }
+                        }
+                        p{
+                            padding: 10px 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .ab-img{
+        width: 40%;
+        height: 70%;
+        background-position: center;
+        background-size: cover;
+        border-radius: 20px;
+        @include mobile{
+            width: 80%;
+        }
+    }
+}
+section#info{
+    width: 100%;
+    height: 1000px;
+    background-image: url(../images/info-img.jpg);
+    background-size: cover;
+    background-position: bottom;
+    position: relative;
+    color: $white-font;
+    
+    &:after{
+        content: "";
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: rgba(0,0,0,0.7);
+        z-index: 1;
+    }
+    .top{
+        position: relative;
+        z-index: 2;
+        text-align: center;
+        .priority{
+            padding-top: 5rem;
+            p{
+                letter-spacing: 3px;
+                font-size: 1.2rem;
+                padding: 1rem;
+            }
+            h2{
+                font-size: 3rem;
+            }
+        }
+        .extra{
+            padding: 2rem;
+            font-size: 1.3rem;
+        }
+        
+    }
+    nav{
+        width: 100%;
+        height: 50%;
+        ul{
+            width: 100%;
+            height: 100%;
+            @include flex(center, center);
+            padding: 3rem 0;
+            gap: 2rem;
+            @include mobile{
+                flex-direction: column;
+                z-index: 2;
+                gap: 3rem;
+            }
+            li{
+                padding: 2rem;
+                width: 18%;
+                height: 100%;
+                text-align: center;
+                z-index: 2;
+                // border: 1px solid #EEE;
+                border-radius: 20px;
+                background-color: rgba(0,0,0,0.3);
+                box-shadow: 2px 5px 5px #eee;
+                @include mobile{
+                    width: 50%;
+                    height: 20%;
+                }
+                a{
+                    @include flex();
+                    flex-direction: column;
+                    gap: 4rem;
+                    @include mobile{
+                        flex-direction: row;
+                        align-items: center;
+                        justify-content: center;
+                        gap: 2rem;
+                    }
+                    .icon{
+                        font-size: 10rem;
+                        // padding: 2rem;
+                        // margin: 2rem;
+                        // border: 1px solid $white-font;
+                        border-radius: 50%;
+                        @include flex();
+                        @include mobile{
+                            border: none;
+                            font-size: 4rem;
+                        }
+
+                    }
+                    h3{
+                        font-size: 2.3rem;
+                        padding-top: 3rem;
+                        @include mobile{
+                            font-size: 2rem;
+                            padding-top: 0;
+                        }
+                    }
+                    p{
+                        padding: 0 2rem;
+                        @include mobile{
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+section#recruit{
+    width: 100%;
+    height: 1000px;
+    margin-bottom: 100px;
+    .vision{
+        .title{
+            width: 100%;
+            text-align: center;
+            padding-top: 5rem;
+            padding-bottom: 3rem;
+            p{
+                letter-spacing: 3px;
+                font-size: 1.2rem;
+                padding: 1rem;
+            }
+            h2{
+                font-size: 3rem;
+            }
+        }
+        p{
+            text-align: center;
+            font-size: 1.3rem;
+        }
+    }
+    .img{
+        width: 100%;
+        height: 80%;
+        @include flex();
+        gap: 3rem;
+        div{
+            width: 40%;
+            height: 70%;
+            background-position: center;
+            background-size: cover;
+            border-radius: 20px;
+        }
+    }
+}
+footer{
+    width: 100%;
+    height: 1000px;
+    .foot-img{
+        width: 100%;
+        height: 600px;
+        background-image: url(../images/foot-img.jpg);
+        background-position: center;
+        background-size: cover;
+        position: relative;
+        @include flex();
+        gap: 2rem;
+        flex-direction: column;
+        &:after{
+            width: 100%;
+            height: 100%;
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: rgba(0,0,0,0.4);
+            z-index: 1;
+        }
+        p{
+            position: relative;
+            color: $white-font;
+            z-index: 2;
+            font-size: 2rem;
+            font-weight: 600;
+            padding: 2rem;
+        }
+        button{
+            z-index: 2;
+            position: relative;
+            background-color: $main-color;
+            color: $white-font;
+            padding: 1rem 2rem;
+            font-size: 1.2rem;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            &:hover{
+                background-color: darken($main-color,20%);
+            }
+        }
+    }
+    .top{
+        @include flex(space-between,center);
+        padding: 1rem;
+        .f-logo{
+            @include flex(flex-start,center);
+            img{
+                width: 100px;
+            }
+        }
+        nav{
+            ul{
+                @include flex(flex-end, center);
+                li{
+                    padding: 0 2rem;
+                    &:nth-of-type(1){
+                        border-right: 1px solid $main-font;
+                    }
+                    a{
+                        &:hover{
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .bottom{
+        @include flex(flex-start,center);
+        padding-left: 2rem;
+        .label{
+            p{
+                padding: 0.5rem;
+                margin-right: 1rem;
+            }
+        }
+        .answer{
+            p{
+                padding: 0.5rem;
+            }
+        }
+    }
+    .rights{
+        padding: 2rem 5rem;
+    }
+}
