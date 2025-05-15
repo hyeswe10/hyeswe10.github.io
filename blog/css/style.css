@@ -491,6 +491,7 @@ section#recruit .vision .title h2 {
 section#recruit .vision p {
   text-align: center;
   font-size: 1.3rem;
+  padding: 1rem;
 }
 section#recruit .img {
   width: 100%;
@@ -506,6 +507,23 @@ section#recruit .img {
           align-items: center;
   gap: 3rem;
 }
+@media screen and (max-width: 768px) {
+  section#recruit .img {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
 section#recruit .img div {
   width: 40%;
   height: 70%;
@@ -513,10 +531,21 @@ section#recruit .img div {
   background-size: cover;
   border-radius: 20px;
 }
+@media screen and (max-width: 768px) {
+  section#recruit .img div {
+    width: 70%;
+    height: 40%;
+  }
+}
 
 footer {
   width: 100%;
   height: 1000px;
+}
+@media screen and (max-width: 768px) {
+  footer {
+    display: none;
+  }
 }
 footer .foot-img {
   width: 100%;
