@@ -53,6 +53,11 @@ header .top-line {
   z-index: 1;
   position: relative;
 }
+@media screen and (max-width: 768px) {
+  header .top-line {
+    background-color: rgba(255, 255, 255, 0.3);
+  }
+}
 header .top-line .logo {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -491,7 +496,7 @@ section#recruit .vision .title h2 {
 section#recruit .vision p {
   text-align: center;
   font-size: 1.3rem;
-  padding: 1rem;
+  padding: 1rem 2rem;
 }
 section#recruit .img {
   width: 100%;
@@ -544,7 +549,7 @@ footer {
 }
 @media screen and (max-width: 768px) {
   footer {
-    display: none;
+    height: 700px;
   }
 }
 footer .foot-img {
@@ -563,11 +568,16 @@ footer .foot-img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 2rem;
+  gap: 1rem;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+@media screen and (max-width: 768px) {
+  footer .foot-img {
+    height: 300px;
+  }
 }
 footer .foot-img:after {
   width: 100%;
@@ -579,6 +589,21 @@ footer .foot-img:after {
   background-color: rgba(0, 0, 0, 0.4);
   z-index: 1;
 }
+footer .foot-img div {
+  display: none;
+  position: relative;
+  color: #eee;
+  z-index: 2;
+  font-size: 2rem;
+  font-weight: 600;
+  padding: 2rem;
+}
+@media screen and (max-width: 768px) {
+  footer .foot-img div {
+    display: block;
+    padding: 1rem;
+  }
+}
 footer .foot-img p {
   position: relative;
   color: #eee;
@@ -586,6 +611,11 @@ footer .foot-img p {
   font-size: 2rem;
   font-weight: 600;
   padding: 2rem;
+}
+@media screen and (max-width: 768px) {
+  footer .foot-img p {
+    display: none;
+  }
 }
 footer .foot-img button {
   z-index: 2;
@@ -612,6 +642,14 @@ footer .top {
       -ms-flex-align: center;
           align-items: center;
   padding: 1rem;
+}
+@media screen and (max-width: 768px) {
+  footer .top {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 footer .top .f-logo {
   display: -webkit-box;
@@ -658,6 +696,13 @@ footer .bottom {
       -ms-flex-align: center;
           align-items: center;
   padding-left: 2rem;
+}
+@media screen and (max-width: 768px) {
+  footer .bottom {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 footer .bottom .label p {
   padding: 0.5rem;
