@@ -1,0 +1,183 @@
+@charset "utf-8";
+
+*{
+    color: #444;
+}
+body{
+    display: block;
+}
+/* header영역 */
+header{
+    margin: 1rem 0;
+    background-image: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
+}
+header > .title{
+    display: none;
+}
+header > .title > hr{
+    width: 30%;
+    margin-left: 2rem;
+    outline: none;
+    border: 2px solid #fff;
+    border-width: 2px;
+    color: #eee;
+}
+header > .title > p{
+    padding: 0.5rem 2rem;
+    color: #eee;
+}
+header > h1.othersize{
+    padding: 2rem;
+    font-weight: 600;
+    text-shadow: 0 0 10px rgba(0,0,0,0.3);
+    letter-spacing: 2px;
+    color: #eee;
+}
+header > .pcsize{
+    display: none;
+    font-weight: 600;
+    text-shadow: 0 0 10px rgba(0,0,0,0.3);
+    letter-spacing: 2px;
+}
+/* main영역 */
+main{
+    width: 80%;
+    margin: 0 auto;
+    padding-bottom: 3rem;
+    position: relative;
+}
+main > section{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 4rem 0;
+    clear: both;
+}
+main > ul{
+    width: 100%;
+    max-width: 500px;
+    margin: 2rem 0;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    gap: 1rem;
+    position: absolute;
+    top: -4.5rem;
+    right: 0;
+    float: right;
+}
+main > ul > li{
+    flex: 1;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+main > ul  > li.on > a{
+    background-image: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
+    color: #eee;
+    font-weight: bolder;
+    text-shadow: 0 0 10px rgba(0,0,0,0.2);
+    box-shadow: 0 0 20px rgba(191, 113, 255, 0.4);
+}
+main > ul > li > a{
+    display: block;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 0.5rem;
+    font-size: 0.8rem;
+    color: #888;
+}
+article{
+    /* width: 100%; */
+    flex: 1;
+    padding: 0.8rem;
+    max-width: 500px;
+}
+article > div{
+    width: 100%;
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 2px 2px 15px rgba(0,0,0,0.2);
+}
+article img{
+    width: 100%;
+    height: 100%
+    /* border-radius: 10px; */
+}
+article h2{
+    font-size: 1.2rem;
+    margin: 0.4rem 0;
+}
+article p{
+    font-size: 0.8rem;
+    text-align: justify;
+    word-break: keep-all;
+}
+
+@media screen and (min-width:768px){
+    body{
+        display: block;
+    }
+    main > section{
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    article{
+        /* width: 40%; */
+        /*
+        1: 남은 공간이 있으면 얼마나 늘릴지
+        1: 공간이 부족하면 얼마큼 줄일지
+        250px: 기본 크기
+        */
+        flex: 1 1 250px;
+    }
+    main > ul{
+        padding-right: 1rem;
+        gap: 2rem;
+    }
+}
+
+@media screen and (min-width:1024px){
+    body{
+        display: flex;
+        align-items: stretch;
+    }
+    header{
+        width: 300px;
+        margin: 0;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+    }
+    header > h1.othersize{
+        display: none;
+    }
+    header > .pcsize{
+        display: block;
+        color: #eee;
+        padding: 2rem;
+        padding-top: 10rem;
+
+    }
+    main{
+        padding: 3rem;
+        margin: 0;
+        margin-left: 350px;
+        padding-bottom: 5rem;
+    }
+    article{
+        flex: 1 1 250px;
+        max-width: 250px;
+    }
+    main > section{
+        padding-bottom: 5rem;
+    }
+    main > ul{
+        top: 1.5rem;
+    }
+    header > .title{
+        display: block;
+    }
+}
