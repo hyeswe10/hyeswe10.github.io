@@ -61,7 +61,7 @@ main > ul{
     flex-direction: row-reverse;
     justify-content: space-between;
     gap: 1rem;
-    position: absolute;
+    position: fixed;
     top: -4.5rem;
     right: 0;
     float: right;
@@ -101,7 +101,7 @@ article > div{
 }
 article img{
     width: 100%;
-    height: 100%
+    height: 100%;
     /* border-radius: 10px; */
 }
 article h2{
@@ -136,6 +136,10 @@ article p{
         padding-right: 1rem;
         gap: 2rem;
     }
+    article img{
+        height: 500px;
+        flex: 1;
+    }
 }
 
 @media screen and (min-width:1024px){
@@ -147,7 +151,7 @@ article p{
         width: 300px;
         margin: 0;
         height: 100%;
-        position: fixed;
+        position: absolute;
         top: 0;
         left: 0;
     }
@@ -175,9 +179,22 @@ article p{
         padding-bottom: 5rem;
     }
     main > ul{
+        /* max-width: none; */
         top: 1.5rem;
+        /* justify-content: flex-start; */
+        /* background-color: rgba(0,0,0,0.1); */
+        /* margin: 0;
+        padding: 1.7rem 0;*/
+        padding-right: 5rem;
     }
+    /* main > ul > li{
+        flex: none;
+        width: 120px;
+    } */
     header > .title{
         display: block;
+    }
+    article img{
+        height: 200px;
     }
 }
