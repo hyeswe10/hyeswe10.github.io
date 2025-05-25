@@ -1,0 +1,178 @@
+@charset "utf-8";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+ul,
+li {
+  list-style: none;
+}
+body {
+  height: 100vh;
+  width: 100%;
+  text-align: center;
+}
+/* main.bgSetting{
+            display: none;
+        } */
+.bgSetting {
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10rem;
+  background-color: #a17c7c;
+}
+main > #title {
+  font-size: 2rem;
+  color: #eee;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+main > #first-text {
+  font-size: 2rem;
+  position: relative;
+}
+#start {
+  font-size: 1.5rem;
+  padding: 1rem;
+  padding-right: 5rem;
+  border-radius: 15px;
+  border: none;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+i.fa-keyboard {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+#bottom {
+  width: 100%;
+  text-align: center;
+}
+#game-start {
+  width: 250px;
+  background-color: #ba5151;
+  color: #eee;
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  margin: 0 auto;
+  cursor: pointer;
+  border: none;
+  font-weight: bolder;
+  font-size: 1.5rem;
+}
+.immed-txt {
+  color: #eee;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+/* 두번째 페이지 */
+ul{
+    max-width: 100%;
+    height: 80%;
+    padding: 1.5rem;
+    flex: 1;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+li{
+    width: 90%;
+    height: 7%;
+    color: #888;
+    font-size: 2rem;
+    border-radius: 50px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    padding: 0.3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+section > ul > li:nth-child(odd){
+    background-color: #F9FFA4;
+    text-align: right;
+    border-end-end-radius: 0;
+}
+section > ul > li:nth-child(even){
+    background-color: #EEE;
+    text-align: left;
+    border-end-start-radius: 0;
+}
+.line{
+    width: 100%;
+    height: 3%;
+    background-color: #eee;
+}
+.text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 12%;
+    gap: 2rem;
+}
+#newTxt{
+    font-size: 2rem;
+    width: 75%;
+    height: 65%;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+.arrow{
+    background-color: #eee;
+    width: 10%;
+    height: 50%;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.arrow:hover{
+    background-color: #8b5555;
+}
+.arrow > i{
+    font-size: 1.5rem;
+}
+@media screen and (min-width: 1024px) {
+  body {
+    display: flex;
+    align-items: center;
+  }
+  .bgSetting {
+    width: 20%;
+    height: 70%;
+    border-radius: 1.5rem;
+    gap: 6rem;
+  }
+  main > #title {
+    font-size: 1.5rem;
+  }
+  #start {
+    font-size: 1rem;
+  }
+  i.fa-keyboard {
+    font-size: 1.5rem;
+    top: 18px;
+  }
+  #game-start {
+    font-size: 1.1rem;
+    width: 200px;
+    padding: 0.7rem 1rem;
+  }
+  .immed-txt {
+    font-size: 0.8rem;
+  }
+}
+

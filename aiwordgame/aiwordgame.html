@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./style.css">
+    <title>Ai와 함께하는 끝말잇기게임</title>
+</head>
+<body>
+    <main class="bgSetting">
+        <div id="title">
+            <p class="title-txt">AI와 함께하는</p>
+            <h1>끝말잇기<br>게임</h1>
+        </div>
+        <div id="first-text">
+            <input type="text" id="start" placeholder="시작할 단어를 입력하세요">
+            <i class="fa-solid fa-keyboard"></i>
+        </div>
+        <div id="bottom">
+            <button id="game-start">GAME START</button>
+            <p class="immed-txt">누르면 바로 시작됩니다</p>
+        </div>
+    </main>
+    <section class="bgSetting">
+        <ul></ul>
+        <div class="line"></div>
+        <div class="text">
+            <input type="text" id="newTxt">
+            <div class="arrow">
+                <i class="fa-solid fa-arrow-up"></i>
+            </div>
+        </div>
+    </section>
+    <script src="./aiwordgame.js"></script>
+</body>
+</html>
