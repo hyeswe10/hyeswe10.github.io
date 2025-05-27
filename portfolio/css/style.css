@@ -1,1 +1,101 @@
-/*# sourceMappingURL=style.css.map */
+@import url("https://fonts.googleapis.com/css2?family=League+Script&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,200..900;1,7..72,200..900&display=swap");
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #E8E6E1;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Literata", serif;
+  font-weight: 300;
+}
+
+#slider {
+  width: 70%;
+  height: 70%;
+  background-color: #E8E6E1;
+  position: relative;
+}
+#slider .front {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: none;
+}
+#slider .front .bg {
+  width: 90%;
+  height: 80%;
+  background-color: #3D4F66;
+  border-style: dotted;
+}
+#slider .front .bg .title {
+  width: 60%;
+  height: 40%;
+  margin-top: 6rem;
+  margin-left: 10rem;
+  padding-left: 2rem;
+  border-left: 1px solid #FFF;
+}
+#slider .front .bg .title .port {
+  width: 70%;
+  font-family: "League Script", cursive;
+  font-size: 5rem;
+  border-bottom: 1px solid #FFF;
+  text-shadow: 0 0 10px #222;
+}
+#slider .front .bg .title .about {
+  font-size: 3rem;
+  text-align: end;
+  font-variant-caps: small-caps;
+  padding-right: 6rem;
+  text-shadow: 0 0 10px #222;
+}
+#slider .front .bg .title .about span {
+  font-weight: 700;
+}
+#slider .front .bg .title .by {
+  text-align: center;
+  padding-left: 6rem;
+}
+#slider .intro {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+#slider .intro .bg {
+  width: 90%;
+  height: 80%;
+  background-color: #3D4F66;
+  border-style: dotted;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 2rem;
+}
+#slider .intro .bg h1 {
+  font-size: 2rem;
+}/*# sourceMappingURL=style.css.map */

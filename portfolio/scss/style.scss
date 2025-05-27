@@ -1,0 +1,88 @@
+$main-color : #3D4F66;
+$white-color : #FFF;
+$main-font : #E8E6E1;
+
+//Portfolio폰트
+@import url('https://fonts.googleapis.com/css2?family=League+Script&display=swap');
+//main폰트
+@import url('https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,200..900;1,7..72,200..900&display=swap');
+
+@mixin flex($justify:center, $align:center){
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+body{
+    @include flex();
+    color: $main-font;
+    box-sizing: border-box;
+    font-family: "Literata", serif;
+    font-weight: 300;
+}
+//#slider 영역
+#slider{
+    width: 70%;
+    height: 70%;
+    background-color: $main-font;
+    position: relative;
+    .front{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        @include flex();
+        display: none;
+        .bg{
+            width: 90%;
+            height: 80%;
+            background-color: $main-color;
+            border-style: dotted;
+            .title{
+                width: 60%;
+                height: 40%;
+                margin-top: 6rem;
+                margin-left: 10rem;
+                padding-left: 2rem;
+                border-left: 1px solid $white-color;
+                .port{
+                    width: 70%;
+                    font-family: "League Script", cursive;
+                    font-size: 5rem;
+                    border-bottom: 1px solid $white-color;
+                    text-shadow: 0 0 10px #222;
+                }
+                .about{
+                    font-size: 3rem;
+                    text-align: end;
+                    font-variant-caps: small-caps;
+                    padding-right: 6rem;
+                    text-shadow: 0 0 10px #222;
+                    span{
+                        font-weight: 700;
+                    }
+                }
+                .by{
+                    text-align: center;
+                    padding-left: 6rem;
+                }
+            }
+        }
+    }
+    .intro{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        @include flex();
+        .bg{
+            width: 90%;
+            height: 80%;
+            background-color: $main-color;
+            border-style: dotted;
+            box-sizing: border-box;
+            padding: 2rem;
+            h1{
+                font-size: 2rem;
+            }
+        }
+    }
+}
