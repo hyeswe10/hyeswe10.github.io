@@ -1,88 +1,433 @@
 $main-color : #3D4F66;
 $white-color : #FFF;
 $main-font : #E8E6E1;
+$sub-bg : #B7C9D6;
+$port-font : "League Script", cursive;
+$default-font : "Literata", serif;
+$korean-font : "Nanum Gothic", sans-serif;
 
 //Portfolio폰트
 @import url('https://fonts.googleapis.com/css2?family=League+Script&display=swap');
 //main폰트
 @import url('https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,200..900;1,7..72,200..900&display=swap');
+//한글폰트
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
 
+//mixin
 @mixin flex($justify:center, $align:center){
     display: flex;
     justify-content: $justify;
     align-items: $align;
+}
+@mixin about($size:4rem){
+    font-size: $size;
+    font-variant-caps: small-caps;
+    text-shadow: 0 0 10px #222;
+    border-left: 2px solid $white-color;
+    padding-left: 2rem;
+    box-sizing: border-box;
+    span{
+        font-weight: 700;
+    }
+}
+@mixin page{
+    width: 1000px;
+    height: 100%;
+    @include flex();
+    background-color: $main-font;
+}
+@mixin bg{
+    width: 90%;
+    height: 80%;
+    background-color: $main-color;
+    border-style: dotted;
+    box-sizing: border-box;
+}
+@mixin text{
+    p{
+        font-size: 0.9rem;
+        font-weight: 200;
+    }
+    .underline{
+        font-size: 1.2rem;
+        font-weight: 400;
+        font-variant-caps: small-caps;
+        text-decoration: underline;
+    }
 }
 
 body{
     @include flex();
     color: $main-font;
     box-sizing: border-box;
-    font-family: "Literata", serif;
+    font-family: $default-font;
     font-weight: 300;
 }
-//#slider 영역
-#slider{
-    width: 70%;
-    height: 70%;
-    background-color: $main-font;
-    position: relative;
-    .front{
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        @include flex();
-        display: none;
-        .bg{
-            width: 90%;
-            height: 80%;
-            background-color: $main-color;
-            border-style: dotted;
-            .title{
-                width: 60%;
-                height: 40%;
-                margin-top: 6rem;
-                margin-left: 10rem;
-                padding-left: 2rem;
-                border-left: 1px solid $white-color;
-                .port{
-                    width: 70%;
-                    font-family: "League Script", cursive;
-                    font-size: 5rem;
-                    border-bottom: 1px solid $white-color;
-                    text-shadow: 0 0 10px #222;
-                }
-                .about{
-                    font-size: 3rem;
-                    text-align: end;
-                    font-variant-caps: small-caps;
-                    padding-right: 6rem;
-                    text-shadow: 0 0 10px #222;
-                    span{
-                        font-weight: 700;
+
+.board{
+    width: 100%;
+    height: 100%;
+    @include flex();
+    flex-direction: column;
+    box-sizing: border-box;
+    .main-board{
+        width: 1000px;
+        height: 700px;
+        overflow: hidden;
+        #slider{
+            width: 7000px;
+            height: 100%;
+            @include flex(flex-start,center);
+            .front{
+                @include page();
+                // display: none;
+                .bg{
+                    @include bg();
+                    .title{
+                        width: 60%;
+                        height: 40%;
+                        margin-top: 6rem;
+                        margin-left: 10rem;
+                        padding-left: 2rem;
+                        border-left: 1px solid $white-color;
+                        .port{
+                            width: 70%;
+                            font-family: $port-font;
+                            font-size: 5rem;
+                            border-bottom: 1px solid $white-color;
+                            text-shadow: 0 0 10px #222;
+                        }
+                        .about{
+                            @include about(3rem);
+                            text-align: end;
+                            padding-right: 6rem;
+                            border-left: none;
+                        }
+                        .by{
+                            text-align: center;
+                            padding-left: 6rem;
+                        }
                     }
                 }
-                .by{
-                    text-align: center;
-                    padding-left: 6rem;
+            }
+            .intro{
+                @include page();
+                // display: none;
+                .bg{
+                    @include bg();
+                    padding: 1rem 0;
+                    @include flex();
+                    flex-direction: column;
+                    gap: 1.5rem;
+                    .about{
+                        width: 90%;
+                        @include about();
+                    }
+                    .info{
+                        width: 90%;
+                        height: 70%;
+                        @include flex();
+                        flex-direction: column;
+                        gap: 1.5rem;
+                        .profile{
+                            height: 60%;
+                            width: 27%;
+                            background-image: url(../images/profile.png);
+                            background-position: center;
+                            background-size: cover;
+                            background-repeat: no-repeat;
+                            border-radius: 3rem;
+                            box-shadow: 0 0 10px #222;
+                        }
+                        .pro-info{
+                            height: 30%;
+                            width: 90%;
+                            border-top: 1px solid $white-color;
+                            border-bottom: 1px solid $white-color;
+                            @include flex(space-evenly,center);
+                            div{
+                                width: 20%;
+                                text-align: center;
+                                line-height: 2rem;
+                                p{
+                                    font-family: $korean-font;
+                                    text-shadow: 0 0 10px #222;
+                                }
+                                .subject{
+                                    font-weight: 600;
+                                    font-size: 1.2rem;
+                                    font-family: "Literata", serif;
+                                    background-color: $sub-bg;
+                                    color: $main-color;
+                                    border-radius: 5px;
+                                    // box-shadow: 0 0 10px #222;
+                                    text-shadow: none;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .likes{
+                @include page();
+                // display: none;
+                .bg{
+                    @include bg();
+                    padding: 1rem 0;
+                    @include flex();
+                    flex-direction: column;
+                    gap: 1.5rem;
+                    .about{
+                        width: 90%;
+                        @include about();
+                    }
+                    .likes2{
+                        height: 70%;
+                        width: 90%;
+                        font-variant-caps: small-caps;
+                        font-size: 1.3rem;
+                        .food-color{
+                            box-sizing: border-box;
+                            width: 100%;
+                            height: 50%;
+                            padding: 0 3rem;
+                            @include flex(center,flex-start);
+                            .food{
+                                width: 50%;
+                                height: 100%;
+                                @include flex(flex-start,flex-start);
+                                flex-direction: column;
+                                gap: 1rem;
+                                border-bottom: 1px solid $white-color;
+                                border-right: 1px solid $white-color;
+                            }
+                            .color{
+                                width: 50%;
+                                height: 100%;
+                                @include flex(flex-start, flex-end);
+                                flex-direction: column;
+                                gap: 1rem;
+                                ul{
+                                    text-align: end;
+                                }
+                            }
+                        }
+                        .music-movies{
+                            box-sizing: border-box;
+                            width: 100%;
+                            height: 50%;
+                            padding: 0 3rem;
+                            @include flex();
+                            .music{
+                                width: 50%;
+                                height: 100%;
+                                @include flex(flex-end,flex-start);
+                                flex-direction: column;
+                                gap: 1rem;
+                            }
+                            .movies{
+                                width: 50%;
+                                height: 100%;
+                                @include flex(flex-end, flex-end);
+                                flex-direction: column;
+                                gap: 1rem;
+                                border-top: 1px solid $white-color;
+                                border-left: 1px solid $white-color;
+                                ul{
+                                    text-align: end;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .routine{
+                @include page();
+                // display: none;
+                .bg{
+                    @include bg();
+                    padding: 1rem 0;
+                    @include flex();
+                    flex-direction: column;
+                    gap: 1.5rem;
+                    .about{
+                        width: 90%;
+                        @include about();
+                    }
+                    .routine2{
+                        height: 70%;
+                        width: 90%;
+                        font-variant-caps: small-caps;
+                        @include flex();
+                        .time{
+                            box-sizing: border-box;
+                            border-right: 1px solid $white-color;
+                            width: 50%;
+                            height: 100%;
+                            @include flex(flex-start,center);
+                            padding-left: 3rem;
+                            ul{
+                                height: 100%;
+                                width: 60%;
+                                @include flex(center,flex-start);
+                                flex-direction: column;
+                                gap: 1rem;
+                                li{
+                                    font-size: 1.1rem;
+                                    height: 10%;
+                                    width: 70%;
+                                    @include flex(space-between,center);
+                                    span{
+                                        padding-top: 3px;
+                                        width: 50%;
+                                        font-family: $korean-font;
+                                    
+                                    }
+                                }
+                            }
+                        }
+                        .img{
+                            background-color: darkblue;
+                            width: 50%;
+                            height: 100%;
+                        }
+                    }
+                }
+            }
+            .skills{
+                @include page();
+                // display: none;
+                .bg{
+                    @include bg();
+                    padding: 1rem 0;
+                    @include flex();
+                    flex-direction: column;
+                    gap: 1.5rem;
+                    .about{
+                        width: 90%;
+                        @include about();
+                    }
+                    .skills2{
+                        height: 70%;
+                        width: 90%;
+                        @include flex();
+                        .skills-left{
+                            font-variant-caps: small-caps;
+                            height: 100%;
+                            width: 50%;
+                            @include flex();
+                            .skills-list{
+                                color: $main-color;
+                                width: 80%;
+                                height: 90%;
+                                background-color: $main-font;
+                                border-radius: 10px;
+                                padding-top: 1rem;
+                                @include flex();
+                                flex-direction: column;
+                                .dots{
+                                    width: 100%;
+                                    height: 10%;
+                                    @include flex(space-evenly,center);
+                                    div{
+                                        width: 6%;
+                                        height: 60%;
+                                        background-color: $main-color;
+                                        border-radius: 50%;
+                                    }
+                                }
+                                h2{
+                                    text-align: center;
+                                    font-size: 2.5rem;
+                                }
+                                .skill-name{
+                                    box-sizing: border-box;
+                                    width: 100%;
+                                    height: 70%;
+                                    font-size: 1.1rem;
+                                    font-weight: 600;
+                                    padding: 1rem 2rem;
+                                    @include flex(flex-start,flex-start);
+                                    gap: 0.6rem;
+                                    flex-direction: column;
+                                    div{
+                                        height: 15%;
+                                        @include flex(flex-start,center);
+                                        gap: 1rem;
+                                        img{
+                                            height: 80%;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        .skills-right{
+                            height: 100%;
+                            width: 50%;
+                            @include flex(flex-start,center);
+                            flex-direction: column;
+                            gap: 1rem;
+                            border-left: 1px solid $white-color;
+                            h2{
+                                width: 100%;
+                                text-align: center;
+                                font-size: 2.5rem;
+                                font-weight: 500;
+                                text-shadow: 0 0 10px #222;
+                                font-variant-caps: small-caps;
+                            }
+                            .text{
+                                padding: 1rem 1rem;
+                                padding-left: 3rem;
+                                @include flex();
+                                flex-direction: column;
+                                gap: 1rem;
+                                .web-pub{
+                                    @include text();
+                                }
+                                .front-end{
+                                    @include text();
+                                }
+                            }
+                        }
+                    }
                 }
             }
         }
     }
-    .intro{
-        position: absolute;
-        width: 100%;
-        height: 100%;
+    .btn-wrap{
+        padding-top: 1.5rem;
+        margin-bottom: 2.5rem;
+        box-sizing: border-box;
         @include flex();
-        .bg{
-            width: 90%;
-            height: 80%;
+        gap: 5rem;
+        button{
+            padding: 0.5rem 1rem;
+            font-family: $korean-font;
+            border: none;
             background-color: $main-color;
-            border-style: dotted;
-            box-sizing: border-box;
-            padding: 2rem;
-            h1{
-                font-size: 2rem;
-            }
+            color: $main-font;
+            font-size: 1.1rem;
+            border-radius: 5px;
+            cursor: pointer;
         }
     }
+    .banner{
+        width: 1000px;
+        height: 5%;
+        font-variant-caps: small-caps;
+        font-size: 1.8rem;
+        font-weight: 500;
+        color: $main-color;
+        margin-bottom: 1rem;
+        @include flex(space-evenly,center);
+        li{
+            padding-bottom: 10px;
+        }
+    }
+}
+//추가 class
+.bolder{
+    font-weight: 600;
+    text-decoration: underline;
 }

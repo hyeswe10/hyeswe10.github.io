@@ -1,148 +1,192 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/reset.css">
-    <link rel="stylesheet" href="./css/style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/style.css" />
     <title>Portfolio</title>
-</head>
-<body>
-    <div id="slider">
-        <div class="front">
+  </head>
+  <body>
+    <div class="board">
+      <ul class="banner">
+        <li data-num="2"><a href="#">intro</a></li>
+        <li data-num="3"><a href="#">likes</a></li>
+        <li data-num="4"><a href="#">routine</a></li>
+        <li data-num="5"><a href="#">skills</a></li>
+      </ul>
+      <div class="main-board">
+        <div id="slider">
+          <div class="front">
             <div class="bg">
-                <div class="title">
-                    <div class="port">PortFolio</div>
-                    <div class="about">A<span>bout</span> M<span>e</span></div>
-                    <div class="by">BY.MJM</div>
-                </div>
+              <div class="title">
+                <div class="port">PortFolio</div>
+                <div class="about">A<span>bout</span> M<span>e</span></div>
+                <div class="by">BY.MJM</div>
+              </div>
             </div>
-        </div>
-        <div class="intro">
+          </div>
+          <div class="intro">
             <div class="bg">
-                <h1>About Me</h1>
-                <div class="info">
-                    <div class="profile"></div>
-                    <div class="pro-info">
-                        <div>
-                            <p class="subject">NAME</p>
-                            <p>문정우</p>
-                        </div>
-                        <div>
-                            <p class="subject">AGE</p>
-                            <p>26</p>
-                        </div>
-                        <div>
-                            <p class="subject">SOCIAL</p>
-                            <p>@hyeswe10</p>
-                        </div>
-                        <div>
-                            <p class="subject">MBTI</p>
-                            <p>ENTJ</p>
-                        </div>
-                    </div>
+              <div class="about">A<span>bout</span> M<span>e</span></div>
+              <div class="info">
+                <div class="profile"></div>
+                <div class="pro-info">
+                  <div>
+                    <p class="subject">NAME</p>
+                    <p>문정우</p>
+                  </div>
+                  <div>
+                    <p class="subject">AGE</p>
+                    <p>26</p>
+                  </div>
+                  <div>
+                    <p class="subject">SOCIAL</p>
+                    <p>@hyeswe10</p>
+                  </div>
+                  <div>
+                    <p class="subject">MBTI</p>
+                    <p>ENTJ</p>
+                  </div>
                 </div>
+              </div>
             </div>
-        </div>
-        <div class="likes">
+          </div>
+          <div class="likes">
             <div class="bg">
-                <h1></h1>
-                <div class="likes2">
-                    <div class="food-color">
-                        <ul class="food">
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                        </ul>
-                        <ul class="color">
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                        </ul>
-                    </div>
-                    <div class="music-movies">
-                        <ul class="music">
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                        </ul>
-                        <ul class="movies">
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="routine">
-            <div class="bg">
-                <h1></h1>
-                <div class="routine2">
-                    <ul class="time">
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
+              <div class="about">A<span>bout</span> M<span>e</span></div>
+              <div class="likes2">
+                <div class="food-color">
+                  <div class="food">
+                    <h3>food</h3>
+                    <ul>
+                      <li>hamburger</li>
+                      <li>pasta</li>
+                      <li>malatang</li>
                     </ul>
-                    <div class="img"></div>
+                  </div>
+                  <div class="color">
+                    <h3>color</h3>
+                    <ul>
+                      <li>black</li>
+                      <li>blue</li>
+                      <li>purple</li>
+                    </ul>
+                  </div>
                 </div>
+                <div class="music-movies">
+                  <div class="music">
+                    <ul>
+                      <li>toxic till the end</li>
+                      <li>dangerously</li>
+                      <li>shape of you</li>
+                    </ul>
+                    <h3>music</h3>
+                  </div>
+                  <div class="movies">
+                    <ul>
+                      <li>avatar</li>
+                      <li>elemental</li>
+                      <li>harry potter</li>
+                    </ul>
+                    <h3>movies</h3>
+                  </div>
+                </div>
+              </div>
             </div>
-        </div>
-        <div class="skills">
+          </div>
+          <div class="routine">
             <div class="bg">
-                <h1></h1>
-                <div class="skills2">
-                    <div class="skills-left">
-                        <div class="skills-list">
-                            <div class="dots"></div>
-                            <h2></h2>
-                            <div class="skill-name">
-                                <div>
-                                    <span></span>
-                                    <i></i>
-                                </div>
-                                <div>
-                                    <span></span>
-                                    <i></i>
-                                </div>
-                                <div>
-                                    <span></span>
-                                    <i></i>
-                                    <i></i>
-                                </div>
-                                <div>
-                                    <span></span>
-                                    <i></i>
-                                </div>
-                                <div>
-                                    <span></span>
-                                    <i></i>
-                                    <i></i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="skills-right">
-                        <h2></h2>
-                        <div class="text">
-                            <div class="web-pub">
-                                <p class="underline"></p>
-                                <p></p>
-                            </div>
-                            <div class="front-end">
-                                <p class="underline"></p>
-                                <p></p>
-                            </div>
-                        </div>
-                    </div>
+              <div class="about">A<span>bout</span> M<span>e</span></div>
+              <div class="routine2">
+                <div class="time">
+                  <ul>
+                    <li>07:00 &nbsp;<span>기상</span></li>
+                    <li>07:50 &nbsp;<span>출발</span></li>
+                    <li>08:40 &nbsp;<span>도착</span></li>
+                    <li>09:30 &nbsp;<span>훈련시작</span></li>
+                    <li>13:20 &nbsp;<span>점심</span></li>
+                    <li>14:10 &nbsp;<span>오후훈련</span></li>
+                    <li>18:00 &nbsp;<span>훈련종료</span></li>
+                    <li>19:00 &nbsp;<span>도착</span></li>
+                  </ul>
                 </div>
+                <div class="img"></div>
+              </div>
             </div>
+          </div>
+          <div class="skills">
+            <div class="bg">
+              <div class="about">A<span>bout</span> M<span>e</span></div>
+              <div class="skills2">
+                <div class="skills-left">
+                  <div class="skills-list">
+                    <div class="dots">
+                      <div></div>
+                      <div></div>
+                      <div></div>
+                      <div></div>
+                    </div>
+                    <h2>Skills</h2>
+                    <div class="skill-name">
+                      <div>
+                        <p>Photoshop</p>
+                        <img src="./images/photoshop.svg" alt="포토샵이미지" />
+                      </div>
+                      <div>
+                        <p>Illustrator</p>
+                        <img
+                          src="./images/illustrator.svg"
+                          alt="일러스트이미지"
+                        />
+                      </div>
+                      <div>
+                        <p>HTML/CSS</p>
+                        <img src="./images/html.svg" alt="html이미지" />
+                        <img src="./images/css.svg" alt="css이미지" />
+                      </div>
+                      <div>
+                        <p>JavaScript</p>
+                        <img src="./images/javascript.svg" alt="js이미지" />
+                      </div>
+                      <div>
+                        <p>Jquery/React</p>
+                        <img src="./images/jquery.svg" alt="jquery이미지" />
+                        <img src="./images/react-dark.svg" alt="react이미지" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="skills-right">
+                  <h2>My Goal</h2>
+                  <div class="text">
+                    <div class="web-pub">
+                      <p class="underline">Web Publisher</p>
+                      <p>
+                        : someone who creates, manages, or updates content on
+                        websites and other online platforms.
+                      </p>
+                    </div>
+                    <div class="front-end">
+                      <p class="underline">Front-End Engineer/Developer</p>
+                      <p>
+                        : a software engineer who focuses on the client-side or
+                        user interface of a web application or website.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
+      <div class="btn-wrap">
+        <button class="auto">자동</button>
+        <button class="stop">정지</button>
+      </div>
     </div>
-</body>
+    <script src="./script/script.js"></script>
+  </body>
 </html>

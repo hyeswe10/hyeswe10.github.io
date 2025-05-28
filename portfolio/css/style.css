@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=League+Script&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,200..900;1,7..72,200..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap");
 body {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -17,14 +18,7 @@ body {
   font-weight: 300;
 }
 
-#slider {
-  width: 70%;
-  height: 70%;
-  background-color: #E8E6E1;
-  position: relative;
-}
-#slider .front {
-  position: absolute;
+.board {
   width: 100%;
   height: 100%;
   display: -webkit-box;
@@ -36,15 +30,54 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
-#slider .front .bg {
+.board .main-board {
+  width: 1000px;
+  height: 700px;
+  overflow: hidden;
+}
+.board .main-board #slider {
+  width: 7000px;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.board .main-board #slider .front {
+  width: 1000px;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #E8E6E1;
+}
+.board .main-board #slider .front .bg {
   width: 90%;
   height: 80%;
   background-color: #3D4F66;
   border-style: dotted;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
-#slider .front .bg .title {
+.board .main-board #slider .front .bg .title {
   width: 60%;
   height: 40%;
   margin-top: 6rem;
@@ -52,30 +85,34 @@ body {
   padding-left: 2rem;
   border-left: 1px solid #FFF;
 }
-#slider .front .bg .title .port {
+.board .main-board #slider .front .bg .title .port {
   width: 70%;
   font-family: "League Script", cursive;
   font-size: 5rem;
   border-bottom: 1px solid #FFF;
   text-shadow: 0 0 10px #222;
 }
-#slider .front .bg .title .about {
+.board .main-board #slider .front .bg .title .about {
   font-size: 3rem;
-  text-align: end;
   font-variant-caps: small-caps;
-  padding-right: 6rem;
   text-shadow: 0 0 10px #222;
+  border-left: 2px solid #FFF;
+  padding-left: 2rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-align: end;
+  padding-right: 6rem;
+  border-left: none;
 }
-#slider .front .bg .title .about span {
+.board .main-board #slider .front .bg .title .about span {
   font-weight: 700;
 }
-#slider .front .bg .title .by {
+.board .main-board #slider .front .bg .title .by {
   text-align: center;
   padding-left: 6rem;
 }
-#slider .intro {
-  position: absolute;
-  width: 100%;
+.board .main-board #slider .intro {
+  width: 1000px;
   height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -86,16 +123,673 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  background-color: #E8E6E1;
 }
-#slider .intro .bg {
+.board .main-board #slider .intro .bg {
   width: 90%;
   height: 80%;
   background-color: #3D4F66;
   border-style: dotted;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  padding: 2rem;
+  padding: 1rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.5rem;
 }
-#slider .intro .bg h1 {
-  font-size: 2rem;
+.board .main-board #slider .intro .bg .about {
+  width: 90%;
+  font-size: 4rem;
+  font-variant-caps: small-caps;
+  text-shadow: 0 0 10px #222;
+  border-left: 2px solid #FFF;
+  padding-left: 2rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.board .main-board #slider .intro .bg .about span {
+  font-weight: 700;
+}
+.board .main-board #slider .intro .bg .info {
+  width: 90%;
+  height: 70%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.5rem;
+}
+.board .main-board #slider .intro .bg .info .profile {
+  height: 60%;
+  width: 27%;
+  background-image: url(../images/profile.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 3rem;
+  -webkit-box-shadow: 0 0 10px #222;
+          box-shadow: 0 0 10px #222;
+}
+.board .main-board #slider .intro .bg .info .pro-info {
+  height: 30%;
+  width: 90%;
+  border-top: 1px solid #FFF;
+  border-bottom: 1px solid #FFF;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.board .main-board #slider .intro .bg .info .pro-info div {
+  width: 20%;
+  text-align: center;
+  line-height: 2rem;
+}
+.board .main-board #slider .intro .bg .info .pro-info div p {
+  font-family: "Nanum Gothic", sans-serif;
+  text-shadow: 0 0 10px #222;
+}
+.board .main-board #slider .intro .bg .info .pro-info div .subject {
+  font-weight: 600;
+  font-size: 1.2rem;
+  font-family: "Literata", serif;
+  background-color: #B7C9D6;
+  color: #3D4F66;
+  border-radius: 5px;
+  text-shadow: none;
+}
+.board .main-board #slider .likes {
+  width: 1000px;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #E8E6E1;
+}
+.board .main-board #slider .likes .bg {
+  width: 90%;
+  height: 80%;
+  background-color: #3D4F66;
+  border-style: dotted;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 1rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.5rem;
+}
+.board .main-board #slider .likes .bg .about {
+  width: 90%;
+  font-size: 4rem;
+  font-variant-caps: small-caps;
+  text-shadow: 0 0 10px #222;
+  border-left: 2px solid #FFF;
+  padding-left: 2rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.board .main-board #slider .likes .bg .about span {
+  font-weight: 700;
+}
+.board .main-board #slider .likes .bg .likes2 {
+  height: 70%;
+  width: 90%;
+  font-variant-caps: small-caps;
+  font-size: 1.3rem;
+}
+.board .main-board #slider .likes .bg .likes2 .food-color {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 100%;
+  height: 50%;
+  padding: 0 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+.board .main-board #slider .likes .bg .likes2 .food-color .food {
+  width: 50%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1rem;
+  border-bottom: 1px solid #FFF;
+  border-right: 1px solid #FFF;
+}
+.board .main-board #slider .likes .bg .likes2 .food-color .color {
+  width: 50%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1rem;
+}
+.board .main-board #slider .likes .bg .likes2 .food-color .color ul {
+  text-align: end;
+}
+.board .main-board #slider .likes .bg .likes2 .music-movies {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 100%;
+  height: 50%;
+  padding: 0 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.board .main-board #slider .likes .bg .likes2 .music-movies .music {
+  width: 50%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1rem;
+}
+.board .main-board #slider .likes .bg .likes2 .music-movies .movies {
+  width: 50%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1rem;
+  border-top: 1px solid #FFF;
+  border-left: 1px solid #FFF;
+}
+.board .main-board #slider .likes .bg .likes2 .music-movies .movies ul {
+  text-align: end;
+}
+.board .main-board #slider .routine {
+  width: 1000px;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #E8E6E1;
+}
+.board .main-board #slider .routine .bg {
+  width: 90%;
+  height: 80%;
+  background-color: #3D4F66;
+  border-style: dotted;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 1rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.5rem;
+}
+.board .main-board #slider .routine .bg .about {
+  width: 90%;
+  font-size: 4rem;
+  font-variant-caps: small-caps;
+  text-shadow: 0 0 10px #222;
+  border-left: 2px solid #FFF;
+  padding-left: 2rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.board .main-board #slider .routine .bg .about span {
+  font-weight: 700;
+}
+.board .main-board #slider .routine .bg .routine2 {
+  height: 70%;
+  width: 90%;
+  font-variant-caps: small-caps;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.board .main-board #slider .routine .bg .routine2 .time {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-right: 1px solid #FFF;
+  width: 50%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-left: 3rem;
+}
+.board .main-board #slider .routine .bg .routine2 .time ul {
+  height: 100%;
+  width: 60%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1rem;
+}
+.board .main-board #slider .routine .bg .routine2 .time ul li {
+  font-size: 1.1rem;
+  height: 10%;
+  width: 70%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.board .main-board #slider .routine .bg .routine2 .time ul li span {
+  padding-top: 3px;
+  width: 50%;
+  font-family: "Nanum Gothic", sans-serif;
+}
+.board .main-board #slider .routine .bg .routine2 .img {
+  background-color: darkblue;
+  width: 50%;
+  height: 100%;
+}
+.board .main-board #slider .skills {
+  width: 1000px;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #E8E6E1;
+}
+.board .main-board #slider .skills .bg {
+  width: 90%;
+  height: 80%;
+  background-color: #3D4F66;
+  border-style: dotted;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 1rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.5rem;
+}
+.board .main-board #slider .skills .bg .about {
+  width: 90%;
+  font-size: 4rem;
+  font-variant-caps: small-caps;
+  text-shadow: 0 0 10px #222;
+  border-left: 2px solid #FFF;
+  padding-left: 2rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.board .main-board #slider .skills .bg .about span {
+  font-weight: 700;
+}
+.board .main-board #slider .skills .bg .skills2 {
+  height: 70%;
+  width: 90%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.board .main-board #slider .skills .bg .skills2 .skills-left {
+  font-variant-caps: small-caps;
+  height: 100%;
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.board .main-board #slider .skills .bg .skills2 .skills-left .skills-list {
+  color: #3D4F66;
+  width: 80%;
+  height: 90%;
+  background-color: #E8E6E1;
+  border-radius: 10px;
+  padding-top: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.board .main-board #slider .skills .bg .skills2 .skills-left .skills-list .dots {
+  width: 100%;
+  height: 10%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.board .main-board #slider .skills .bg .skills2 .skills-left .skills-list .dots div {
+  width: 6%;
+  height: 60%;
+  background-color: #3D4F66;
+  border-radius: 50%;
+}
+.board .main-board #slider .skills .bg .skills2 .skills-left .skills-list h2 {
+  text-align: center;
+  font-size: 2.5rem;
+}
+.board .main-board #slider .skills .bg .skills2 .skills-left .skills-list .skill-name {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 100%;
+  height: 70%;
+  font-size: 1.1rem;
+  font-weight: 600;
+  padding: 1rem 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 0.6rem;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.board .main-board #slider .skills .bg .skills2 .skills-left .skills-list .skill-name div {
+  height: 15%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1rem;
+}
+.board .main-board #slider .skills .bg .skills2 .skills-left .skills-list .skill-name div img {
+  height: 80%;
+}
+.board .main-board #slider .skills .bg .skills2 .skills-right {
+  height: 100%;
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1rem;
+  border-left: 1px solid #FFF;
+}
+.board .main-board #slider .skills .bg .skills2 .skills-right h2 {
+  width: 100%;
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 500;
+  text-shadow: 0 0 10px #222;
+  font-variant-caps: small-caps;
+}
+.board .main-board #slider .skills .bg .skills2 .skills-right .text {
+  padding: 1rem 1rem;
+  padding-left: 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1rem;
+}
+.board .main-board #slider .skills .bg .skills2 .skills-right .text .web-pub p {
+  font-size: 0.9rem;
+  font-weight: 200;
+}
+.board .main-board #slider .skills .bg .skills2 .skills-right .text .web-pub .underline {
+  font-size: 1.2rem;
+  font-weight: 400;
+  font-variant-caps: small-caps;
+  text-decoration: underline;
+}
+.board .main-board #slider .skills .bg .skills2 .skills-right .text .front-end p {
+  font-size: 0.9rem;
+  font-weight: 200;
+}
+.board .main-board #slider .skills .bg .skills2 .skills-right .text .front-end .underline {
+  font-size: 1.2rem;
+  font-weight: 400;
+  font-variant-caps: small-caps;
+  text-decoration: underline;
+}
+.board .btn-wrap {
+  padding-top: 1.5rem;
+  margin-bottom: 2.5rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 5rem;
+}
+.board .btn-wrap button {
+  padding: 0.5rem 1rem;
+  font-family: "Nanum Gothic", sans-serif;
+  border: none;
+  background-color: #3D4F66;
+  color: #E8E6E1;
+  font-size: 1.1rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.board .banner {
+  width: 1000px;
+  height: 5%;
+  font-variant-caps: small-caps;
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: #3D4F66;
+  margin-bottom: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.board .banner li {
+  padding-bottom: 10px;
+}
+
+.bolder {
+  font-weight: 600;
+  text-decoration: underline;
 }/*# sourceMappingURL=style.css.map */
