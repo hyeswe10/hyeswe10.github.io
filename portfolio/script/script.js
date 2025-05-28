@@ -24,6 +24,11 @@ gsap.set("#slider",{x:-(imgWidth)*current});
 
 //실험용 다음버튼클릭시 이동
 const clickNextBtn = ()=>{
+    // if(current < 5){
+    //     current++;
+    // } else {
+    //     current = 0
+    // }
     current++;
     gsap.to("#slider",{
         x:-(imgWidth)*current,
@@ -39,16 +44,10 @@ const clickNextBtn = ()=>{
 
 //.bolder class 삭제 및 추가
 const menuClass = ()=>{
-    console.log(current);
-    if(current > 1){
-        console.log(current);
-        $banner.forEach((value)=>{
+    $banner.forEach((value)=>{
         value.classList.remove("bolder");
-        });
-        console.log(current);
-        $banner[current-2].classList.add("bolder");
-        console.log(current);
-    }
+    });
+    $banner[current-1].classList.add("bolder");
 }
 
 //자동버튼
