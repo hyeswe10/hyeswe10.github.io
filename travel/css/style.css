@@ -1,0 +1,371 @@
+html {
+  font-size: 16px;
+}
+@media screen and (max-width: 500px) {
+  html {
+    font-size: 10px;
+  }
+}
+
+body {
+  background-color: #1d1d1d;
+  overflow-x: hidden;
+}
+@media screen and (max-width: 500px) {
+  body {
+    font-size: 10px;
+  }
+}
+
+header {
+  height: 100vh;
+  background-image: url(../images/header_bg.jpg);
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+header .slogan {
+  width: 70%;
+  height: 70%;
+  border: 10px solid #ab7835;
+  color: #eee;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+header .slogan h2 {
+  font-size: 1.5rem;
+}
+header .slogan h2:after {
+  content: "";
+  display: block;
+  width: 70%;
+  height: 2px;
+  background-color: #eee;
+  margin: 1rem auto;
+}
+header .slogan h1 {
+  font-size: 10rem;
+  letter-spacing: 0.3rem;
+  font-weight: 800;
+}
+@media screen and (max-width: 500px) {
+  header .slogan h1 {
+    font-size: 4rem;
+  }
+}
+header .slogan p {
+  font-size: 1.6rem;
+  text-align: center;
+}
+
+main {
+  width: 70%;
+  margin: 0 auto;
+}
+main section {
+  height: 100vh;
+}
+@media screen and (max-width: 500px) {
+  main section {
+    height: 60vh;
+  }
+}
+main section h2 {
+  color: #ab7835;
+  font-size: 4rem;
+  padding-top: 3rem;
+}
+main section h2:after {
+  content: "";
+  display: block;
+  width: 100px;
+  height: 3px;
+  background-color: #ab7835;
+}
+main #about-me {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+main #about-me .wrapper {
+  background-color: #373737;
+  padding: 0 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: none;
+      -ms-flex-pack: none;
+          justify-content: none;
+  -webkit-box-align: none;
+      -ms-flex-align: none;
+          align-items: none;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+@media screen and (max-width: 500px) {
+  main #about-me .wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+  }
+}
+main #about-me .wrapper .text {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  color: #eee;
+}
+@media screen and (max-width: 500px) {
+  main #about-me .wrapper .text {
+    z-index: 5;
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+}
+main #about-me .wrapper .text p {
+  width: 80%;
+  font-size: 1.3rem;
+  margin: 2rem 0;
+}
+@media screen and (max-width: 500px) {
+  main #about-me .wrapper .text p {
+    width: 100%;
+  }
+}
+main #about-me .wrapper .text button {
+  outline: none;
+  border: 1px solid #ab7835;
+  background-color: transparent;
+  color: #ab7835;
+  padding: 1rem;
+  margin: 3rem 0;
+  cursor: pointer;
+}
+main #about-me .wrapper .text button:hover {
+  background-color: #ab7835;
+  color: #222;
+}
+main #about-me .wrapper .image {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  position: relative;
+}
+@media screen and (max-width: 500px) {
+  main #about-me .wrapper .image {
+    top: 0;
+    -o-object-fit: cover;
+       object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+}
+main #about-me .wrapper .image img {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 95%;
+}
+@media screen and (max-width: 500px) {
+  main #about-me .wrapper div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+main #latest h2 {
+  width: 500px;
+  margin: 0 auto;
+}
+main #latest ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: none;
+      -ms-flex-pack: none;
+          justify-content: none;
+  -webkit-box-align: none;
+      -ms-flex-align: none;
+          align-items: none;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 5rem;
+  margin-top: 5rem;
+}
+main #latest ul li:nth-child(even) {
+  position: relative;
+  top: 50px;
+}
+main #latest ul li h3 {
+  color: #ab7835;
+  padding: 2rem 0;
+  font-size: 1.3rem;
+}
+main #latest ul li h3:after {
+  content: "";
+  display: block;
+  height: 3px;
+  background-color: #ab7835;
+  margin-top: 1rem;
+}
+main #latest ul li p {
+  color: #eee;
+  font-size: 1.2rem;
+}
+main #latest ul li button {
+  background-color: transparent;
+  color: #ab7835;
+  border: none;
+  padding: 1rem 1rem 1rem 0;
+}
+main #contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+main #contact .wrapper {
+  background-color: #373737;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: none;
+      -ms-flex-pack: none;
+          justify-content: none;
+  -webkit-box-align: none;
+      -ms-flex-align: none;
+          align-items: none;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+main #contact .wrapper .image {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  position: relative;
+}
+@media screen and (max-width: 500px) {
+  main #contact .wrapper .image {
+    display: none;
+  }
+}
+main #contact .wrapper .image img {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+main #contact .wrapper .title {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding: 0 3rem;
+}
+main #contact .wrapper .title h2 {
+  margin-bottom: 2rem;
+}
+main #contact .wrapper .title .input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: none;
+      -ms-flex-pack: none;
+          justify-content: none;
+  -webkit-box-align: none;
+      -ms-flex-align: none;
+          align-items: none;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 2rem;
+  color: #eee;
+}
+main #contact .wrapper .title .input label {
+  width: 80%;
+}
+main #contact .wrapper .title .input label span {
+  display: block;
+}
+main #contact .wrapper .title .input label input {
+  display: block;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #eee;
+  outline: none;
+  font-size: 1.3rem;
+  padding: 0.5rem;
+  margin-bottom: 2rem;
+}
+main #contact .wrapper .title .message label {
+  display: block;
+  color: #eee;
+}
+main #contact .wrapper .title .message textarea {
+  display: block;
+  width: 100%;
+  height: 150px;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #eee;
+}
+main #contact .wrapper .title button {
+  margin: 2rem 0;
+  background-color: transparent;
+  border: 1px solid #ab7835;
+  color: #ab7835;
+  padding: 1rem;
+  cursor: pointer;
+}
+main #contact .wrapper .title button:hover {
+  background-color: #ab7835;
+  color: #222;
+}/*# sourceMappingURL=style.css.map */

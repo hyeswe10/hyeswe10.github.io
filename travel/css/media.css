@@ -1,0 +1,42 @@
+@charset "utf-8";
+
+@media screen and (max-width:500px){
+    html,body{
+        font-size: 10px;
+    }
+    header > .slogan > h1{
+        font-size: 4rem;
+    }
+    section{
+        height: 60vh;
+    }
+    #about-me > .wrapper{
+        position: relative;
+        width: 100%;
+        height: 100%;
+        padding: 0;
+    }
+    #about-me > .wrapper > div{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+    #about-me > .wrapper > .text{
+        z-index: 5;
+        background-color: rgba(0,0,0,0.4);
+    }
+    #about-me > .wrapper > .image{
+        top: 0;
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+    #about-me > .wrapper > .text > p{
+        width: 100%;
+    }
+    #contact > .wrapper > .image{
+        display: none;
+    }
+}

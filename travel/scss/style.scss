@@ -1,0 +1,278 @@
+@charset "utf-8";
+
+$main-color: #ab7835;
+
+
+@mixin flex($justify:center,$align:center,$direction:row){
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+    flex-direction: $direction;
+}
+@mixin mobile{
+    @media screen and (max-width:500px){
+        @content;
+    }
+}
+
+html{
+    font-size: 16px;
+    @include mobile{
+        font-size: 10px;
+    }
+}
+body{
+    background-color: #1d1d1d;
+    overflow-x: hidden;
+    @include mobile{
+        font-size: 10px;
+    }
+}
+
+// header 영역
+header{
+    height: 100vh;
+    background-image: url(../images/header_bg.jpg);
+    background-size: cover;
+    @include flex();
+    .slogan{
+        width: 70%;
+        height: 70%;
+        border: 10px solid $main-color;
+        color: #eee;
+        @include flex(space-around,center,column);
+        h2{
+            font-size: 1.5rem;
+            &:after{
+                content: '';
+                display: block;
+                width: 70%;
+                height: 2px;
+                background-color: #eee;
+                margin: 1rem auto;
+            }
+        }
+        h1{
+            font-size: 10rem;
+            letter-spacing: 0.3rem;
+            font-weight: 800;
+            @include mobile{
+                font-size: 4rem;
+            }
+        }
+        p{
+            font-size: 1.6rem;
+            text-align: center;
+        }
+    }
+}
+
+// main 영역
+main{
+    width: 70%;
+    margin: 0 auto;
+    //전체적인 section
+    section{
+        height: 100vh;
+        @include mobile{
+            height: 60vh;
+        }
+        h2{
+            color: $main-color;
+            font-size: 4rem;
+            padding-top: 3rem;
+            &:after{
+                content: '';
+                display: block;
+                width: 100px;
+                height: 3px;
+                background-color: $main-color;
+            }
+        }
+    }
+    #about-me{
+        @include flex();
+        .wrapper{
+            background-color: #373737;
+            padding: 0 3rem;
+            @include flex(none,none);
+            @include mobile{
+                position: relative;
+                width: 100%;
+                height: 100%;
+                padding: 0;
+            }
+            .text{
+                flex: 1;
+                color: #eee;
+                @include mobile{
+                    z-index: 5;
+                    background-color: rgba(0,0,0,0.4);
+                }
+                p{
+                    width: 80%;
+                    font-size: 1.3rem;
+                    margin: 2rem 0;
+                    @include mobile{
+                        width: 100%;
+                    }
+
+                }
+                button{
+                    outline: none;
+                    border: 1px solid $main-color;
+                    background-color: transparent;
+                    color: $main-color;
+                    padding: 1rem;
+                    margin: 3rem 0;
+                    cursor: pointer;
+                    &:hover{
+                        background-color: $main-color;
+                        color: #222;
+                    }
+                }
+            }
+            .image{
+                flex: 1;
+                position: relative;
+                @include mobile{
+                    top: 0;
+                    object-fit: cover;
+                    width: 100%;
+                    height: 100%;
+                }
+                img{
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    width: 95%;
+                }
+            }
+            div{
+                @include mobile{
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+
+                }
+            }
+        }
+    }
+    #latest{
+        h2{
+            width: 500px;
+            margin: 0 auto;
+        }
+        ul{
+            @include flex(none,none);
+            gap: 5rem;
+            margin-top: 5rem;
+            li{
+                &:nth-child(even){
+                    position: relative;
+                    top: 50px;
+                }
+                h3{
+                    color: $main-color;
+                    padding: 2rem 0;
+                    font-size: 1.3rem;
+                    &:after{
+                        content: '';
+                        display: block;
+                        height: 3px;
+                        background-color: $main-color;
+                        margin-top: 1rem;
+                    }
+                }
+                p{
+                    color: #eee;
+                    font-size: 1.2rem;
+                }
+                button{
+                    background-color: transparent;
+                    color: $main-color;
+                    border: none;
+                    padding: 1rem 1rem 1rem 0;
+                }
+            }
+        }
+    }
+    #contact{
+        @include flex();
+        .wrapper{
+            background-color: #373737;
+            width: 100%;
+            @include flex(none,none);
+            .image{
+                flex: 1;
+                position: relative;
+                @include mobile{
+                    display: none;
+                }
+                img{
+                    position: absolute;
+                    bottom: 0;
+                    right: 0;
+                    // width: 95%;
+                }
+            }
+            .title{
+                flex: 1;
+                padding: 0 3rem;
+                h2{
+                    margin-bottom: 2rem;
+                }
+                .input{
+                    @include flex(none,none);
+                    gap: 2rem;
+                    color: #eee;
+                    label{
+                        width: 80%;
+                        span{
+                            display: block;
+                        }
+                        input{
+                            display: block;
+                            background-color: transparent;
+                            border: none;
+                            border-bottom: 1px solid #eee;
+                            outline: none;
+                            font-size: 1.3rem;
+                            padding: 0.5rem;
+                            margin-bottom: 2rem;
+                        }
+                    }
+                }
+                .message{
+                    label{
+                        display: block;
+                        color: #eee;
+                    }
+                    textarea{
+                        display: block;
+                        width: 100%;
+                        height: 150px;
+                        background-color: transparent;
+                        border: none;
+                        border-bottom: 1px solid #eee;
+                    }
+                }
+                button{
+                    margin: 2rem 0;
+                    background-color: transparent;
+                    border: 1px solid $main-color;
+                    color: $main-color;
+                    padding: 1rem;
+                    cursor: pointer;
+                    &:hover{
+                        background-color: $main-color;
+                        color: #222;
+                    }
+                }
+            }
+        }
+    }
+}
+//footer 영역
