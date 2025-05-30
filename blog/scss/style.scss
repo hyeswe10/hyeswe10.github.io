@@ -486,6 +486,8 @@ footer{
     .bottom{
         @include mobile{
             justify-content: center;
+            font-size: 0.85rem;
+            padding-left: none;
         }
         @include flex(flex-start,center);
         padding-left: 2rem;

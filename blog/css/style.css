@@ -714,6 +714,8 @@ footer .bottom {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    font-size: 0.85rem;
+    padding-left: none;
   }
 }
 footer .bottom .label p {
