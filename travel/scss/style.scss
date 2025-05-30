@@ -10,7 +10,7 @@ $main-color: #ab7835;
     flex-direction: $direction;
 }
 @mixin mobile{
-    @media screen and (max-width:500px){
+    @media screen and (max-width:400px){
         @content;
     }
 }
@@ -102,6 +102,15 @@ main{
                 height: 100%;
                 padding: 0;
             }
+            div{
+                @include mobile{
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                }
+            }
             .text{
                 flex: 1;
                 color: #eee;
@@ -116,7 +125,6 @@ main{
                     @include mobile{
                         width: 100%;
                     }
-
                 }
                 button{
                     outline: none;
@@ -146,16 +154,6 @@ main{
                     bottom: 0;
                     left: 0;
                     width: 95%;
-                }
-            }
-            div{
-                @include mobile{
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    width: 100%;
-                    height: 100%;
-
                 }
             }
         }

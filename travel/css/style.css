@@ -1,7 +1,7 @@
 html {
   font-size: 16px;
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 400px) {
   html {
     font-size: 10px;
   }
@@ -11,7 +11,7 @@ body {
   background-color: #1d1d1d;
   overflow-x: hidden;
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 400px) {
   body {
     font-size: 10px;
   }
@@ -69,7 +69,7 @@ header .slogan h1 {
   letter-spacing: 0.3rem;
   font-weight: 800;
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 400px) {
   header .slogan h1 {
     font-size: 4rem;
   }
@@ -86,7 +86,7 @@ main {
 main section {
   height: 100vh;
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 400px) {
   main section {
     height: 60vh;
   }
@@ -135,12 +135,21 @@ main #about-me .wrapper {
       -ms-flex-direction: row;
           flex-direction: row;
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 400px) {
   main #about-me .wrapper {
     position: relative;
     width: 100%;
     height: 100%;
     padding: 0;
+  }
+}
+@media screen and (max-width: 400px) {
+  main #about-me .wrapper div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
   }
 }
 main #about-me .wrapper .text {
@@ -149,7 +158,7 @@ main #about-me .wrapper .text {
           flex: 1;
   color: #eee;
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 400px) {
   main #about-me .wrapper .text {
     z-index: 5;
     background-color: rgba(0, 0, 0, 0.4);
@@ -160,7 +169,7 @@ main #about-me .wrapper .text p {
   font-size: 1.3rem;
   margin: 2rem 0;
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 400px) {
   main #about-me .wrapper .text p {
     width: 100%;
   }
@@ -184,7 +193,7 @@ main #about-me .wrapper .image {
           flex: 1;
   position: relative;
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 400px) {
   main #about-me .wrapper .image {
     top: 0;
     -o-object-fit: cover;
@@ -198,15 +207,6 @@ main #about-me .wrapper .image img {
   bottom: 0;
   left: 0;
   width: 95%;
-}
-@media screen and (max-width: 500px) {
-  main #about-me .wrapper div {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-  }
 }
 main #latest h2 {
   width: 500px;
@@ -293,7 +293,7 @@ main #contact .wrapper .image {
           flex: 1;
   position: relative;
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 400px) {
   main #contact .wrapper .image {
     display: none;
   }
