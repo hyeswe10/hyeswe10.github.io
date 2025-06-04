@@ -2,21 +2,25 @@
 const $slider = document.querySelector("#slider");
 const $banner = document.querySelectorAll(".banner>li");
 const $btnWrap = document.querySelector(".btn-wrap");
-const $slides = document.querySelectorAll("#slider>div")
-console.log($slides);
 const $auto = document.querySelector(".auto");
 const $stop = document.querySelector(".stop");
 
+//추가전 슬라이드 목록
+const $originalSlides = document.querySelectorAll("#slider > div");
+const maxLength = $originalSlides.length;
+
 //앞뒤로 같은 슬라이드 추가하기
-const firstClone = $slides[0].cloneNode(true);
+const firstClone = $originalSlides[0].cloneNode(true);
 $slider.appendChild(firstClone);
-const lastClone = $slides[$slides.length-1].cloneNode(true);
+const lastClone = $originalSlides[$originalSlides.length-1].cloneNode(true);
 $slider.insertBefore(lastClone,$slider.firstChild);
+
+//슬라이드 목록갱신
+const $slides = document.querySelectorAll("#slider > div")
 
 //변수설정
 const imgWidth = 1000; //단위 픽셀
 let current = 1; //앞에 마지막 추가 후 1로 변경예정
-const maxLength = $slides.length;
 let intervalID = null;
 
 //초기설정값
@@ -34,9 +38,12 @@ const clickNextBtn = ()=>{
         x:-(imgWidth)*current,
         duration: 2,
         onComplete: ()=>{
-            if(current >= maxLength){
-                current = 0;
-                gsap.set("#slider",{x:(imgWidth)*current});
+            if(current >= maxLength + 1){
+                current = 1;
+                gsap.set("#slider",{x:-(imgWidth)*current});
+            } else if(current <= 0){
+                current = maxLength - 2;
+                gsap.set("#slider",{x:-(imgWidth)*current});
             }
         }
     });
@@ -47,7 +54,11 @@ const menuClass = ()=>{
     $banner.forEach((value)=>{
         value.classList.remove("bolder");
     });
-    $banner[current-1].classList.add("bolder");
+    const $idx = (current - 1 + maxLength) % maxLength;
+    if($idx){
+        $banner[$idx].classList.add("bolder");
+    }
+    console.log(current);
 }
 
 //자동버튼
