@@ -334,7 +334,7 @@ section#skills{
   height: 100vh;
   position: relative;
 }
-#skills h2{
+#skills > h2{
   font-size: 6rem;
   position: absolute;
   top: 50%;
@@ -363,12 +363,14 @@ section#skills{
 .shape3, .shape7, .shape8{ clip-path: circle(40%);}
 .shape4, .shape10, .shape13{ clip-path: ellipse(60% 40% at 50% 50%);}
 .shape5, .shape11{ clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);}
+
 /* background */
 .shape1, .shape9{background-color: #F85B8B; transform: rotate(20deg);}
 .shape3, .shape6, .shape10{background-color: #983965; transform: rotate(-10deg);}
 .shape4, .shape7, .shape11{background-color: #2139B8;}
 .shape5, .shape8, .shape12{background-color: #1ECA7D;}
 .shape2, .shape13{background-color: #1AF4B7;}
+
 /*skill position*/
 .shape1{top: 8%; left: 20%;}
 .shape2{top: 18%; left: 70%;}
@@ -394,9 +396,9 @@ footer{
 footer > .background{
   width: 97%;
   height: 95%;
-  background-color: #2957E2;
+  background-color: var(--main-color);
   border-radius: 30px;
-  color: #eee;
+  color: var(--sub-color);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -419,13 +421,13 @@ footer > .background{
   gap: 1rem;
 }
 .introduce > li > a{
-  background-color: #eee;
-  color: #2957E2;
+  background-color: var(--sub-color);
+  color: var(--main-color);
   padding: 0.5rem 1rem;
   border-radius: 30px;
   font-weight: bolder;
 }
 .introduce > li > a:hover{
   background-color: #1a378b;
-  color: #eee;
+  color: var(--sub-color);
 }
