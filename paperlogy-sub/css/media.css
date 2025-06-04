@@ -1,0 +1,232 @@
+@charset "utf-8";
+
+:root{
+  --main-color: #2957E2;
+  --sub-color: #eee;
+  --sub-font: 3rem;
+}
+
+html{
+  /*font-size 10px 고정*/
+  font-size: 62.5%;
+}
+body{
+  background-color: var(--main-color);
+  color: var(--sub-color);
+  overflow-x: hidden;
+}
+#logo{
+  z-index: 50;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: var(--sub-color);
+  color: var(--main-color);
+  font-size: 2rem;
+  text-align: center;
+  line-height: 80px;
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  animation: logoFade 4s linear infinite;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0,0,0,0.3);
+}
+@keyframes logoFade {
+  0%,100%{ opacity: 1;}
+  50%{ opacity: 0.5}
+}
+#logo > li{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  cursor: pointer;
+  transition: top 0.5s;
+}
+#logo > li:nth-child(1){ top: 0; }
+#logo > li:nth-child(2){ top: 100%;}
+#logo:hover > li:nth-child(1){ top:-100%; }
+#logo:hover > li:nth-child(2){ top: 0;}
+
+header{
+  padding-top: 150px;
+  height: 100vh;
+  position: relative;
+  font-size: 4rem;
+}
+nav{
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.gnb{
+  font-size: 3rem;
+  font-weight: bold;
+}
+.gnb > li{
+  position: relative;
+}
+.gnb > li:before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -1rem;
+  width: 0;
+  height: 100%;
+  background-color: var(--sub-color);
+  z-index: -1;
+  transition: 0.5s;
+}
+.gnb > li:hover:before{
+  width: 100%;
+}
+.gnb > li > a{
+  transition: 0.5s;
+  transform-origin: left center;
+}
+.gnb > li:hover > a{
+  transform: scale(1.3);
+  color: var(--main-color);
+}
+.title{
+  font-size: 2rem;
+  align-self: flex-end;
+}
+.title > li{
+  margin: 2rem 0;
+}
+header > h1{
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 14vw;
+  text-shadow: 0 0 5px rgba(0,0,0,0.3);
+}
+header > h1:before{
+  content: "PORTFOLIO";
+  position: absolute;
+  text-align: center;
+  top: -15%;
+  left: -15%;
+  color: var(--main-color);
+  -webkit-text-stroke: 1px var(--sub-color);
+  z-index: -1;
+  font-size: 12rem;
+}
+.arrow-wrap{
+  position: absolute;
+  bottom: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 100px;
+}
+.arrow-wrap > div{
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.arrow-box{
+  width: 100%;
+  height: 100%;background-color: var(--sub-color);
+  border-radius: 10px;
+  transform: rotate(30deg);
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation: rotateBox 10s linear infinite;
+}
+@keyframes rotateBox {
+  0%{transform: rotate(0);}
+  100%{transform: rotate(360deg);}
+}
+.arrow-wrap > .arrow{
+  color: var(--main-color);
+  left: 50%;
+  transform: translateX(-50%);
+}
+/* 공통 */
+section{
+  width: 90%;
+  margin: 10rem auto;
+}
+
+/*about*/
+section#about{
+  margin-top: 10rem;
+  font-size: 1.5rem;
+}
+#about .info{
+  background-color: var(--sub-color);
+  color: var(--main-color);
+  padding: 3rem 4rem;
+  border-radius: 2rem;
+  box-shadow: 0 0 20px rgba(0,0,0,0.3);
+}
+#about .info h2{
+  z-index: 10;
+  color: var(--sub-color);
+  -webkit-text-stroke: 1px var(--main-color);
+  position: relative;
+  margin: 5rem 0;
+  font-size: 3rem;
+}
+#about .info h2.what:before{
+  content: '';
+  background-color: var(--main-color);
+  width: 20%;
+  aspect-ratio: 1/0.7;
+  position: absolute;
+  top: 50%;
+  left: 18%;
+  transform: translate(-50%,-50%) rotate(30deg);
+  border-radius: 25px;
+  z-index: -1;
+}
+#about .info h2.my:before{
+  content: '';
+  background-color: var(--main-color);
+  width: 20%;
+  aspect-ratio: 1/0.7;
+  position: absolute;
+  top: 50%;
+  left: 20%;
+  transform: translate(-50%,-50%) rotate(30deg);
+  border-radius: 25px;
+  z-index: -1;
+}
+#about .info p{
+  text-align: end;
+}
+
+#about .word{
+  margin: 5rem 0;
+}
+#about .word h2{
+  font-size: var(--sub-font);
+}
+#about .word h2.bottom{
+  text-align: right;
+}
+#about .keyword{}
+#about .keyword > li{
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin: 2rem 0;
+}
+#about .keyword > li > p{
+  font-size: 4vw;
+  font-weight: bolder;
+  padding: 1rem 2rem;
+  border: 1px solid var(--sub-color);
+  border-radius: 4rem;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+#about .keyword > li > p.yes:hover{
+  background-color: var(--sub-color);
+  color: var(--main-color);
+}
