@@ -17,7 +17,7 @@ const checkDevice = () => {
     } 
     const script = document.createElement("script");
     script.src = `./script/${device}.js`;
-    script.setAttribute("data-script", device);
+    script.setAttribute("data-script", "true");
     document.body.appendChild(script);
     currentScript = device;
 };
