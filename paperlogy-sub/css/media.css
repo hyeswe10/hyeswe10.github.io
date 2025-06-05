@@ -14,6 +14,8 @@ body{
   background-color: var(--main-color);
   color: var(--sub-color);
   overflow-x: hidden;
+  /* 이미 작업한 것들이 있기 때문에 바꾸진 않지만 clamp를 사용해서 가장 작은 사이즈, 중간사이즈, 최대사이즈를 지정해서 사용할 수 있다 */
+  /* font-size: clamp(1rem,1vw,1.8rem); */
 }
 
 /* logo 영역 */
@@ -53,13 +55,13 @@ body{
 
 /* header 영역 */
 header{
-  padding-top: 150px;
+  padding-top: 17%;
   height: 100vh;
   position: relative;
   font-size: 4rem;
 }
 nav{
-  padding: 2rem;
+  padding: 1rem 2rem;
   display: flex;
   flex-direction: column;
   gap: 2rem;
@@ -121,11 +123,12 @@ header > h1{
 } */
 .arrow-wrap{
   position: absolute;
-  bottom: 20%;
-  left: 50%;
-  transform: translateX(-50%);
+  bottom: 22%;
+  left: 15%;
+  /* transform: translateX(-50%); */
   width: 100px;
   height: 100px;
+  opacity: 0.7;
 }
 .arrow-wrap > div{
   position: absolute;
@@ -205,6 +208,7 @@ section#about{
 }
 #about .info p{
   text-align: end;
+  word-break: keep-all;
 }
 
 #about .word{
@@ -219,12 +223,15 @@ section#about{
 #about .keyword > li{
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: 2rem;
   margin: 2rem 0;
 }
 #about .keyword > li > p{
   font-size: 4vw;
   font-weight: bolder;
+  word-break: keep-all;
+  text-align: center;
   padding: 1rem 2rem;
   border: 1px solid var(--sub-color);
   border-radius: 4rem;
@@ -233,4 +240,172 @@ section#about{
 #about .keyword > li > p.yes:hover{
   background-color: var(--sub-color);
   color: var(--main-color);
+}
+
+/* project 영역 */
+#projects > .project-wrap{
+  margin-bottom: 5rem;
+  width: 100%;
+}
+#projects > .project-wrap > h2{
+  border: 1px solid var(--sub-color);
+  font-size: var(--sub-font);
+  border-radius: 3rem;
+  padding: 1rem 0;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(0,0,0,0.3);
+  margin-bottom: 2rem;
+}
+#projects > .project-wrap > .item-list{
+  font-size: 1.5rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.item-list > .item{
+  box-shadow: 0 0 20px rgba(0,0,0,0.3);
+  display: flex;
+  flex-direction: column;
+  background-color: var(--sub-color);
+  flex: 1;
+}
+.item-list > .item > .item-overview{
+  background-color: var(--main-color);
+}
+#projects > .project-wrap > .item-list > li > .btn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  background-color: var(--main-color);
+}
+#projects > .project-wrap > .item-list > li > .btn > p{
+  flex: 1;
+  text-align: center;
+  font-size: 1.8rem;
+  padding: 1rem 0;
+  font-weight: bolder;
+}
+#projects > .project-wrap > .item-list > li > *{
+  border: 1px solid var(--sub-color);
+  border-top: none;
+}
+#projects > .project-wrap > .item-list > li > .item-title{
+  border-top: 1px solid var(--sub-color);
+  background-color: var(--sub-color);
+  color: var(--main-color);
+  font-size: 2rem;
+}
+#projects > .project-wrap > .item-list > li > .item-detail{
+  background-color: var(--sub-color);
+  color: var(--main-color);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: center;
+}
+#projects > .project-wrap > .item-list > li > .item-detail > li{
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+#projects > .project-wrap > .item-list > li > .item-detail > li > .tool{
+  display: flex;
+  gap: 0.5rem;
+}
+.tool > p{
+  background-color: var(--main-color);
+  color: var(--sub-color);
+  padding: 0.4rem;
+  border-radius: 15px;
+}
+.item-list > .item > .item-img{
+  width: 100%;
+  aspect-ratio: 1/0.5;
+  background-color: #888;
+}
+
+/* practice 레이아웃 변경 */
+#projects > .practice > .item-list{
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.practice .item{
+  width: 47%;
+}
+.practice .item-detail > li > p{
+  width: auto;
+  display: none;
+}
+
+/* skills */
+#skills > h2{
+  border: 1px solid var(--sub-color);
+  font-size: var(--sub-font);
+  border-radius: 3rem;
+  padding: 1rem 0;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(0,0,0,0.3);
+  margin-bottom: 2rem;
+}
+#skills > .skill-item{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem;
+}
+#skills > .skill-item > li{
+  color: var(--sub-color);
+  padding: 1rem 2rem;
+  border-radius: 4rem;
+  font-size: 2rem;
+  font-weight: bolder;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+#skills > .skill-item > li:hover{
+  filter: brightness(80%);
+}
+/* background */
+.shape1, .shape9{background-color: #F85B8B;}
+.shape3, .shape6, .shape10{background-color: #983965;}
+.shape4, .shape7, .shape11{background-color: #4555a5;}
+.shape5, .shape8, .shape12{background-color: #1ECA7D;}
+.shape2, .shape13{background-color: #177258;}
+
+/* footer */
+footer{
+  background-color: var(--sub-color);
+  color: var(--main-color);
+  font-size: 3rem;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+footer .text{
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+}
+footer .text > h2{
+  font-size: 6rem;
+}
+footer .text > p{
+  padding: 0 1rem;
+  font-size: 1.5rem;
+}
+footer .text > .introduce > li > a{
+  background-color: var(--main-color);
+  color: var(--sub-color);
+  padding: 1rem 2rem;
+  border-radius: 4rem;
+  margin: 1rem 0;
+}
+footer .text > .introduce > li > a:hover{
+  background-color: #1a378b;
+  color: var(--sub-color);
 }

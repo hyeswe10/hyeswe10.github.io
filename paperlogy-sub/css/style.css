@@ -9,6 +9,7 @@
 html{
   /* 폰트사이즈를 기본 10px로 설정 */
   /* font-size: 62.5%; */
+  /* 1440 ->10px */
   font-size: 0.98vw;
   behavior: smooth;
 }
